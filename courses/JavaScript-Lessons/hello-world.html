@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>User Login</title>
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <script src="/js/main.js"></script>
+
+</head>
+<body>
+<header class="container mb-4 flex-shrink-0">
+    <div class="pb-2 pt-2 border-bottom">
+        <div class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand me-md-4" href="/web-learning/home.html">
+                    <img width="60" alt="WP logo" src="/img/Logo.png"
+                         loading="lazy"><span>Web Learning</span></a>
+                <input class="col-6" type="text" name="Search" id="search" placeholder="Пошук курсів">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link  " href="/web-learning/user-login.html">Вхід</a></li>
+                        <li class="nav-item"><a class="nav-link me-3 " href="/web-learning/user-new.html">Реєстрація</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h1>Песочница JavaScript</h1>
+    <textarea id="code" rows="10" cols="50">// Начните писать свой код здесь...</textarea><br>
+    <button onclick="runCode()">Выполнить код</button>
+    <div id="output"></div>
+
+    <script>
+        function runCode() {
+            var code = document.getElementById("code").value;
+            var outputDiv = document.getElementById("output");
+
+            try {
+                var result = eval(code);
+                outputDiv.innerHTML = "Результат:<br>" + result;
+            } catch (error) {
+                outputDiv.innerHTML = "Ошибка:<br>" + error.message;
+            }
+        }
+    </script>
+</main>
+
+<footer class="text-light flex-shrink-0">
+    <div class="container-xl pt-5 pb-3">
+        <div class="col d-flex">
+            <div class="col mb-4 mb-lg-0 d-flex flex-column">
+                <div class="col justify-content-center m-auto pb-4">
+                    <img src="/img/Logo.png" alt="Logo" width="150px">
+                </div>
+                <div class="col justify-content-center m-auto">
+                    <h2 class="title-footer">Всі Курси</h2>
+                </div>
+                <div class="row d-flex flex-row">
+                    <div class="col d-flex justify-content-center m-auto">
+                        <ul class="list-courses lh-lg d-flex">
+                            <li><a class="text-decoration-none text-light"
+                                   href="/ru/languages/javascript">JavaScript</a></li>
+                            <li><a class="text-decoration-none text-light" href="/ru/languages/html">HTML</a></li>
+                            <li><a class="text-decoration-none text-light" href="/ru/languages/css">CSS</a></li>
+                            <li><a class="text-decoration-none text-light" href="/ru/languages/php">PHP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center"><p class="mt-2 mb-2 me-4 flex-shrink-0 text-center">Created by Serhii
+            Dudarko, 2024</p></div>
+    </div>
+</footer>
+
+</body>
+</html>

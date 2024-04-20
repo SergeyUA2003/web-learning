@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <script src="/js/main.js"></script>
+</head>
+<body>
+<header class="container mb-4 flex-shrink-0">
+    <div class="pb-2 pt-2 border-bottom">
+        <div class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand me-md-4" href="/web-learning/home.html">
+                    <img width="60" alt="WP logo" src="/img/Logo.png"
+                         loading="lazy"><span>Web Learning</span></a>
+                <input class="col-6" type="text" name="Search" id="search" placeholder="Пошук курсів">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link  " href="/web-learning/user-login.html">Вхід</a></li>
+                        <li class="nav-item"><a class="nav-link me-3 " href="/web-learning/user-new.html">Реєстрація</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="flex-grow-1">
+    <div class="mt-sm-4">
+        <div class="container">
+            <nav aria-label="Хлебные крошки">
+                <ol class="breadcrumb mb-2" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope"
+                        itemtype="https://schema.org/ListItem"><a title="Главная" itemprop="item" href="/ru"><span
+                            class="bi bi-house text-muted"></span>
+                        <meta content="1" itemprop="position">
+                        <meta content="CodeBasics" itemprop="name">
+                    </a></li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope"
+                        itemtype="https://schema.org/ListItem"><a itemprop="item"
+                                                                  class="text-decoration-none text-muted"
+                                                                  href="/ru/language_categories/programming"><span
+                            itemprop="name">Программирование</span>
+                        <meta content="2" itemprop="position">
+                    </a></li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope"
+                        itemtype="https://schema.org/ListItem"><a itemprop="item"
+                                                                  class="text-decoration-none text-muted"
+                                                                  href="/ru/languages/javascript"><span itemprop="name">JavaScript</span>
+                        <meta content="2" itemprop="position">
+                    </a></li>
+                </ol>
+            </nav>
+            <div class="px-3 px-sm-5 py-4 py-sm-5 mb-4 bg-white rounded-3 shadow-sm border" itemscope=""
+                 itemtype="http://schema.org/ImageObject">
+                <div class="row">
+                    <div class="col">
+                        <div class="badge border text-dark small">Бесплатный курс</div>
+                        <h1 class="fw-bold" itemprop="name">Курс JavaScript: обучение JS для начинающих бесплатно</h1>
+                        <p class="col-md-10 fs-5">Изучение программирования — интересный и захватывающий процесс.
+                            Синтаксис языка — самая простая и короткая часть пути, но без неё невозможно начать. Этот
+                            бесплатный онлайн-курс по JavaScript познакомит с базовыми понятиями языка. Вы выучите
+                            основы и напишете свои первые программы на JS
+                        </p>
+                        <div class="text-muted lead mb-5"><span class="text-nowrap me-4"><span
+                                class="bi bi-clock me-2"></span>18 часов</span><span class="text-nowrap me-4"><span
+                                class="bi bi-people me-2"></span>102762 студента</span><span
+                                class="d-inline-block"><span class="bi bi-book me-2"></span>72 урока с практикой в браузере</span>
+                        </div>
+                        <a class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4"
+                           href="/ru/languages/javascript/lessons/hello-world">Начать обучение</a><a
+                            class="btn btn-lg btn-outline-secondary px-4 mb-3 mt-2" href="/ru/users/new">Зарегистрироваться</a>
+                    </div>
+                    <div class="d-none d-md-block col-4 align-self-center text-center"><span
+                            class="colored x-fs-15 devicon-javascript-plain"></span></div>
+                </div>
+            </div>
+            <div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Основы JavaScript</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/web-learning/courses/JavaScript-Lessons/hello-world.html">1.
+                                Привет, Мир!</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/comments">2.
+                                Комментарии</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/instructions">3.
+                                Инструкции (Statements)</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/testing">4.
+                                Как мы проверяем ваши решения</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/syntax-errors">5.
+                                Синтаксические ошибки</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">JavaScript – один из самых популярных языков программирования в
+                        мире. Он используется для создания интерактивных веб-страниц, мобильных приложений, в серверной
+                        разработке.
+
+                        Изучать JS мы будем с нуля, с самых азов. Первый модуль – плацдарм &nbsp;для написания
+                        осмысленных программ. В нем мы разберем, как написать свой первый код на JS. Расскажем, что
+                        такое комментарии и зачем они нужны. На примере проверки ваших решений рассмотрим, что такое
+                        тестирование и как читать вывод тестов.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Арифметика</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/basic">6.
+                                Арифметические операции</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/operator">7.
+                                Операторы</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/commutativity">8.
+                                Коммутативная операция</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/composition">9.
+                                Композиция операций</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/priority">10.
+                                Приоритет операций</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/float">11.
+                                Числа с плавающей точкой</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/infinity">12.
+                                Бесконечность (Infinity)</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/nan">13.
+                                NaN</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/linting">14.
+                                Линтер</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Современные программы создаются для обслуживания бизнесов, помощи
+                        в ежедневной жизни и развлечений. Но в основе их работы по-прежнему лежат вычисления. Наиболее
+                        простая и базовая тема в программировании — арифметика. В этом модуле мы переведем
+                        арифметические действия на язык программирования, поговорим о приоритете операций и операциях с
+                        дробным числами. Вспомним школьные правила из уроков математики и узнаем, что получится, если
+                        делить на ноль в JavaScript. А под конец расскажем, что такое линтер и почему он может
+                        «ругаться».
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Строки</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/quotes">15.
+                                Кавычки</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/escape-characters">16.
+                                Экранирующие последовательности</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/string-concatenation">17.
+                                Конкатенация</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/encoding">18.
+                                Кодировка</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Текст в программировании называется «строками», и эта тема не так
+                        проста, как может показаться. Как вывести фразу, в которой есть и одинарные, и двойные кавычки?
+                        Как вообще быть с текстом, ведь компьютер не знает ничего о буквах! Модуль посвящен разным
+                        аспектам написания текста – от кавычек и экранирования до кодировки.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Переменные в языке JavaScript</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/definition">19.
+                                Что такое переменная</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/change">20.
+                                Изменение переменной</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/variables-naming">21.
+                                Выбор имени переменной</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/errors">22.
+                                Ошибки при работе с переменными</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/variables-expressions">23.
+                                Выражения в определениях</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/variable-concatenation">24.
+                                Переменные и конкатенация</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/naming-style">25.
+                                Стили именования</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/magic-numbers">26.
+                                Магические числа</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/constants">27.
+                                Константы</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/interpolation">28.
+                                Интерполяция</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/symbols">29.
+                                Извлечение символов из строки</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Информацию можно помещать в специальные «хранилища» — переменные.
+                        Это позволяет переиспользовать уже существующие данные и не дублировать их в разных частях кода.
+                        В этом модуле мы разберем как изменять переменные и именовать их, чтобы чтение вашего кода было
+                        понятным для любого разработчика. Вы поймете, что придумать название переменной не так-то
+                        просто! А еще расскажем, как использовать переменные для упрощения сложных вычислений.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Типы данных JavaScript</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/primitive-data-types">30.
+                                Типы данных</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/undefined">31.
+                                undefined</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/data-types-immutability">32.
+                                Неизменяемость примитивных типов
+                            </a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/data-types-weak-typing">33.
+                                Слабая типизация</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">JavaScript — язык со слабой типизацией и неизменяемыми
+                        примитивными типами данных. Что произойдет, если мы попробуем умножить число на строку? Каким
+                        образом JavaScript понимает, что за тип данных перед ним? И что делает JavaScript, когда видит
+                        несоответствие типов? Ответы на эти вопросы вы найдете в текущем модуле.
+                    </div>
+                </div>
+                <div class="my-5">
+                    <div class="card p-3 border-0">
+                        <div class="card-body d-flex">
+                            <div class="me-auto fs-3">Начните прямо сейчас</div>
+                            <div><a class="btn btn-primary btn-lg" href="/ru/users/new">Регистрация</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Вызов функций</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/call">34.
+                                Функции и их вызов</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/math">35.
+                                Математические функции JavaScript</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/function-signature">36.
+                                Сигнатура функции</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/calling-functions-default-arguments">37.
+                                Параметры по умолчанию</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/calling-functions-expression">38.
+                                Вызов функции — выражение</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/variadic-parameters">39.
+                                Функции с переменным числом параметров</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/deterministic">40.
+                                Детерминированность</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/stdlib">41.
+                                Стандартная библиотека</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Для выражения любой произвольной операции в программировании
+                        существует понятие «функция». Функции — кирпичики, из которых программисты строят системы. В
+                        этом модуле мы научимся пользоваться уже созданными функциями. Посмотрим на сигнатуру функции в
+                        документации и разберемся, как её использовать. Познакомимся со стандартными библиотеками,
+                        которые хранят тысячи функций. Все функции невозможно выучить, но каждый программист должен
+                        знать, где искать документацию по ним.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Свойства и Методы</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/properties-syntax">42.
+                                Свойства</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/properties-methods">43.
+                                Методы</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/properties-immutability">44.
+                                Неизменяемость</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/properties-expressions">45.
+                                Свойства и методы как выражения</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/properties-chain-of-methods">46.
+                                Цепочка вызовов</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Данные, которыми мы оперируем в своих программах, могут обладать
+                        важными свойствами. В JavaScript свойства встроены прямо в язык. Кроме свойств у данных
+                        существуют методы — функции, находящиеся внутри свойств. Свойства и методы — такие же выражения,
+                        как переменные, константы или вызовы функции, а значит, их можно всячески комбинировать. Глубже
+                        эти темы разбираются на отдельных курсах, посвященных объектно-ориентированным возможностям
+                        JavaScript. Мы же в этом модуле изучим основы.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Определение функций</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/define-functions-syntax">47.
+                                Создание (определение) функций</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/define-functions-return">48.
+                                Возврат значений</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/define-functions-parameters">49.
+                                Параметры функций</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/define-functions-default-parameters">50.
+                                Необязательные параметры функций</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/define-functions-short-syntax">51.
+                                Упрощенный синтаксис функций</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Определение собственных функций значительно упрощает написание и
+                        поддержку программ. Например, умение определять функции позволяет объединять сложные (составные)
+                        операции в одну – вся сложность может быть скрыта за одной простой функцией. Научившись писать
+                        функции, вы сделаете первый шаг на пути к построению по-настоящему полезных программ. И мы вам в
+                        этом поможем. В этом модуле вы создадите свою первую функцию и научитесь давать ей (а заодно
+                        переменным и константам) понятные названия.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Логика</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/bool-type">52.
+                                Логический тип</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/predicates">53.
+                                Предикаты</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/logic-combine-expressions">54.
+                                Комбинирование логических операций</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/logical-operators">55.
+                                Логические операторы</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/logical-negation">56.
+                                Отрицание</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/logical-expressions">57.
+                                Результат логических выражений</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Логические выражения позволяют отвечать на вопросы, которые
+                        возникают во время работы программы. Пользователь аутентифицирован? Подписка оплачена? Год
+                        високосный? В этом модуле изучаем функции-предикаты – те, которые задают вопрос и отвечают на
+                        него – правда это или ложь. Попрактикуемся в написании таких функций и перейдем к более сложным
+                        логическим выражениям.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Условные конструкции</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/if">58.
+                                Условная конструкция (if)</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/if-else">59.
+                                else</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/else-if">60.
+                                Конструкция else if</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/ternary-operator">61.
+                                Тернарный оператор</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/switch">62.
+                                Конструкция Switch</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Задача функции-предиката — получить ответ на вопрос, но обычно
+                        этого недостаточно и нужно выполнить определенное действие в зависимости от ответа. If и Switch
+                        – конструкции JavaScript, с помощью которых программист может выбирать необходимое поведение
+                        программы в зависимости от разных условий: пропускать одни инструкции и выполнять другие. Их и
+                        разберем на практике в этом модуле.
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12"><h2 class="h4">Циклы</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/while">63.
+                                Цикл While</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/aggregation-numbers">64.
+                                Агрегация данных (Числа)</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/aggregation-strings">65.
+                                Агрегация данных (Строки)</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/iteration-over-string">66.
+                                Обход строк</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/conditions-inside-loops">67.
+                                Условия внутри тела цикла</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/build-strings">68.
+                                Формирование строк в циклах</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/syntax-sugar">69.
+                                Синтаксический сахар</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/mutators">70.
+                                Инкремент и декремент</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/return-from-loops">71.
+                                Возврат из циклов</a></li>
+                            <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
+                                                                      href="/ru/languages/javascript/lessons/for">72.
+                                Цикл For</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">Любой код может повторяться десятки, тысячи, миллионы раз. В
+                        комбинации с другими известными нам инструментами — переменными и условиями — это открывает
+                        множество возможностей по построению программ и сложных систем. Приведем простой пример. Вам
+                        нужно найти конкретную фразу в учебнике из 500 страниц. Фразу вы помните, а вот номер страницы
+                        нет. Самый простой (и долгий) способ — последовательно просматривать страницы до тех пор, пока
+                        не найдете нужную. Для выполнения таких повторяющихся действий и нужны циклы.
+                    </div>
+                </div>
+                <div class="card shadow-sm border-0 mt-5 py-3 py-md-3 px-3">
+                    <div class="card-body row">
+                        <div class="col-sm-12 col-md-auto mb-3">
+                            <div class="display-6 fw-bold">Готовы попробовать?</div>
+                            <div class="fs-4 fw-bold text-primary">Регистрация не требуется</div>
+                        </div>
+                        <div class="col my-auto text-md-end"><a class="btn btn-outline-primary btn-lg"
+                                                                href="/ru/languages/javascript/lessons/hello-world">Демо
+                            урок</a></div>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <div class="d-flex"><h2 class="me-auto mt-auto">Похожие курсы</h2>
+                        <div class="mt-auto"><a class="text-muted text-decoration-none small"
+                                                href="/ru/language_categories/programming">Посмотреть все курсы
+                            категории Программирование</a></div>
+                    </div>
+                    <hr class="mt-1 mb-4">
+                    <div class="row gy-3 gx-2 g-sm-4 gy-lg-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
+                        <div class="col">
+                            <div class="card h-100 shadow-sm border-0"><img class="card-img-top" alt="Иконка CSS"
+                                                                            src="/assets/css-39a286152ebc19245e8a5bbe117054c90389d346d8a75718cdc507f57bff6f5b.png"
+                                                                            loading="lazy">
+                                <div class="card-body">
+                                    <div class="card-title h2"><a
+                                            class="stretched-link text-dark text-decoration-none text-nowrap"
+                                            href="/ru/languages/css">CSS</a></div>
+                                    <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
+                                            class="bi bi-clock me-2"></span>9 часов</span><span
+                                            class="text-nowrap d-inline-block"><span class="bi bi-people me-2"></span>44194</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm border-0"><img class="card-img-top" alt="Иконка Haskell"
+                                                                            src="/assets/haskell-fe0e6876d1716baffd1595237313c9e2a8ee30060adbc8baf6235554233026d1.png"
+                                                                            loading="lazy">
+                                <div class="card-body">
+                                    <div class="card-title h2"><a
+                                            class="stretched-link text-dark text-decoration-none text-nowrap"
+                                            href="/ru/languages/haskell">Haskell</a></div>
+                                    <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
+                                            class="bi bi-clock me-2"></span>0 часов</span><span
+                                            class="text-nowrap d-inline-block"><span class="bi bi-people me-2"></span>797</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm border-0"><img class="card-img-top" alt="Иконка Rust"
+                                                                            src="/assets/rust-5e3939960531a7070a9ece63cccb0b9b65efae170aeaacf630b3f7f266babe24.png"
+                                                                            loading="lazy">
+                                <div class="card-body">
+                                    <div class="card-title h2"><a
+                                            class="stretched-link text-dark text-decoration-none text-nowrap"
+                                            href="/ru/languages/rust">Rust</a></div>
+                                    <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
+                                            class="bi bi-clock me-2"></span>0 часов</span><span
+                                            class="text-nowrap d-inline-block"><span class="bi bi-people me-2"></span>1060</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm border-0"><img class="card-img-top" alt="Иконка HTML"
+                                                                            src="/assets/html-d665b1de9bcce7a443722b84f4aeea9bfcbe05c2141a672547d683fcbd853918.png"
+                                                                            loading="lazy">
+                                <div class="card-body">
+                                    <div class="card-title h2"><a
+                                            class="stretched-link text-dark text-decoration-none text-nowrap"
+                                            href="/ru/languages/html">HTML</a></div>
+                                    <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
+                                            class="bi bi-clock me-2"></span>10 часов</span><span
+                                            class="text-nowrap d-inline-block"><span class="bi bi-people me-2"></span>82558</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-light flex-shrink-0">
+    <div class="container-xl pt-5 pb-3">
+        <div class="col d-flex">
+            <div class="col mb-4 mb-lg-0 d-flex flex-column">
+                <div class="col justify-content-center m-auto pb-4">
+                    <img src="/img/Logo.png" alt="Logo" width="150px">
+                </div>
+                <div class="col justify-content-center m-auto">
+                    <h2 class="title-footer">Всі Курси</h2>
+                </div>
+                <div class="row d-flex flex-row">
+                    <div class="col d-flex justify-content-center m-auto">
+                        <ul class="list-courses lh-lg d-flex">
+                            <li><a class="text-decoration-none text-light"
+                                   href="/ru/languages/javascript">JavaScript</a></li>
+                            <li><a class="text-decoration-none text-light" href="/ru/languages/html">HTML</a></li>
+                            <li><a class="text-decoration-none text-light" href="/ru/languages/css">CSS</a></li>
+                            <li><a class="text-decoration-none text-light" href="/ru/languages/php">PHP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center"><p class="mt-2 mb-2 me-4 flex-shrink-0 text-center">Created by Serhii
+            Dudarko, 2024</p></div>
+    </div>
+</footer>
