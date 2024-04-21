@@ -15,7 +15,7 @@
         <a class="text-decoration-none text-dark" href="#courses" id="courses">Курси</a>
       </h2>
 
-      <div class="row gy-3 gx-2 g-sm-4 gy-lg-5 row-cols-2 row-cols-md-3 row-cols-lg-4 align-items-center justify-content-center">
+      <div class="row gx-2 row-cols-lg-4 align-items-stretch justify-content-center">
         <CourseItem v-for="course of courses" :key="course.id" :course="course"/>
       </div>
     </div>

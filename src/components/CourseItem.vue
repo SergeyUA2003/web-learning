@@ -8,8 +8,7 @@
         <div class="card-title h2"><a
             class="stretched-link text-dark text-decoration-none text-nowrap"
             href="/web-learning/courses/javascript.html">{{course.name}}</a></div>
-        <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
-            class="bi bi-clock me-2"></span>{{course.duration}}</span>
+        <div class="text-muted"><span class="text-nowrap d-inline-block me-4">{{course.duration}}</span>
         </div>
       </div>
     </div>

@@ -91,6 +91,32 @@ main {
                 }
             }
         }
+
+        .row {
+            gap: 30px;
+
+            .col {
+                margin-top: 0 !important;
+                width: calc(25% - 23px);
+
+                @media (max-width: 980px) {
+                    width: calc(50% - 15px);
+                    flex-wrap: wrap !important;
+                }
+
+                .card-title {
+                    a {
+                        font-size: clamp(20px, 32 / 1440 * 100vw, 32px);
+                    }
+                }
+
+                img {
+                    max-height: 260px;
+                    height: 100%;
+                    object-fit: fill;
+                }
+            }
+        }
     }
 }
 
