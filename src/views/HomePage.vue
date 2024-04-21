@@ -25,96 +25,35 @@
       </div>
     </div>
     <div class="mb-5 pb-5">
-      <div class="container container-courses">
-        <div class="mb-5">
-          <div class="d-flex flex-column align-items-start mb-5 list-button-courses">
-            <div class="d-flex flex-wrap">
-              <a class="mb-2 mb-sm-0 me-2 me-sm-0 fw-light text-decoration-none fs-5 badge text-bg-light p-2 p-sm-3"
-                 href="/ru/language_categories/programming">Рекомендовані Курси</a>
-              <a class="mb-2 mb-sm-0 me-2 me-sm-0 ms-sm-4 fw-light text-decoration-none fs-5 badge text-bg-light p-2 p-sm-3"
-                 href="/ru/language_categories/layouting">Web програмування</a>
-              <a class="mb-2 mb-sm-0 me-2 me-sm-0 ms-sm-4 fw-light text-decoration-none fs-5 badge text-bg-light p-2 p-sm-3"
-                 href="/ru/language_categories/layouting">Верстка</a>
-            </div>
-          </div>
-          <h2 class="me-auto mb-3 mb-sm-0">
-            <a class="text-decoration-none text-dark" href="#courses" id="courses">Курси</a>
-          </h2>
-          <div class="row gy-3 gx-2 g-sm-4 gy-lg-5 row-cols-2 row-cols-md-3 row-cols-lg-4 align-items-center justify-content-center">
-            <div class="col">
-              <div class="card h-100 shadow-sm border-0">
-                <img class="card-img-top" alt="Іконка JavaScript"
-                     src="/img/JS.jpg"
-                     loading="lazy">
-                <div class="card-body">
-                  <div class="card-title h2"><a
-                      class="stretched-link text-dark text-decoration-none text-nowrap"
-                      href="/web-learning/courses/javascript.html">JavaScript</a></div>
-                  <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
-                      class="bi bi-clock me-2"></span>18 годин</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100 shadow-sm border-0">
-                <img class="card-img-top" alt="Іконка HTML" src="/img/HTML.jpg" loading="lazy">
-                <div class="card-body">
-                  <div class="card-title h2"><a
-                      class="stretched-link text-dark text-decoration-none text-nowrap"
-                      href="/web-learning/courses/html.html">HTML</a></div>
-                  <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
-                      class="bi bi-clock me-2"></span>10 годин</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100 shadow-sm border-0"><img class="card-img-top" alt="Іконка CSS"
-                                                              src="/img/CSS.jpg" loading="lazy">
-                <div class="card-body">
-                  <div class="card-title h2"><a
-                      class="stretched-link text-dark text-decoration-none text-nowrap"
-                      href="/web-learning/courses/css.html">CSS</a></div>
-                  <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
-                      class="bi bi-clock me-2"></span>9 годин</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100 shadow-sm border-0"><img class="card-img-top" alt="Іконка PHP"
-                                                              src="/img/PHP.jpg" loading="lazy">
-                <div class="card-body">
-                  <div class="card-title h2"><a
-                      class="stretched-link text-dark text-decoration-none text-nowrap"
-                      href="/web-learning/courses/php.html">PHP</a></div>
-                  <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
-                      class="bi bi-clock me-2"></span>18 годин</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100 shadow-sm border-0">
-                <img class="card-img-top" alt="Іконка TypeScript" src="/img/Typescript.jpg" loading="lazy">
-                <div class="card-body">
-                  <div class="card-title h2"><a
-                      class="stretched-link text-dark text-decoration-none text-nowrap"
-                      href="/web-learning/courses/typeScript.html">TypeScript</a></div>
-                  <div class="text-muted"><span class="text-nowrap d-inline-block me-4"><span
-                      class="bi bi-clock me-2"></span>13 годин</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CourseList v-bind:courses="courses" />
     </div>
   </main>
 </template>
 <script>
+
+import axios from 'axios';
+import CourseList from '@/components/CourseList.vue';
+
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  data() {
+    return {
+      courses: []
+    }
+  },
+  mounted() {
+    axios
+        .get('http://localhost:3000/courses')
+        .then(res => {
+          // console.log('res: ', res);
+          this.courses = res.data
+        })
+        .catch(error => {
+          console.log('Error fetching courses from the server: ', error)
+        })
+  },
+  components: {
+    CourseList
+  }
 }
 </script>
