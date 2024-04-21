@@ -59,13 +59,31 @@
       ]
     },
     {
-      "email": "meizum2103@gmail.com",
       "name": "Pips",
+      "email": "mypostykr@gmail.com",
       "password": "123Ivan123",
       "roles": [
         "USER"
       ],
-      "id": "Nl27Qsq"
+      "id": "54nmXkH"
+    },
+    {
+      "name": "Ivan Sipalka",
+      "email": "pips@mail.com",
+      "password": "123Ivan123",
+      "roles": [
+        "USER"
+      ],
+      "id": "AIw_lB4"
+    },
+    {
+      "name": "Pips",
+      "email": "mypostykr@gmail.com",
+      "password": "123Ivan123",
+      "roles": [
+        "USER"
+      ],
+      "id": "Ug1Dbzn"
     }
   ]
 }
