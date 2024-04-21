@@ -115,6 +115,6 @@
 </template>
 <script>
 export default {
-  name: 'HomeMain'
+  name: 'HomePage'
 }
 </script>
