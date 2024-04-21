@@ -1,4 +1,4 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import WebLearnApplication from './Application.vue'
 
-createApp(App).mount('#app')
+createApp(WebLearnApplication).mount('#app')

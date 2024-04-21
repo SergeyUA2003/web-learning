@@ -1,0 +1,112 @@
+body {
+    background: rgb(221, 221, 224) !important;
+
+    header {
+        .navbar-collapse {
+            width: 100%;
+            max-width: 170px;
+        }
+
+        .container-fluid {
+            .navbar-brand {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            input {
+                max-width: 600px;
+                height: 37px;
+                background-color: #eeeeee;
+            }
+
+            input::placeholder {
+                text-align: center;
+                font-size: 20px;
+            }
+
+            ul {
+                li {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    h1 {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-bottom: 20px !important;
+    }
+
+    .display-4 {
+        margin-bottom: 30px !important;
+    }
+
+    p.lead {
+        margin-bottom: 30px !important;
+    }
+
+    .banner {
+        .banner-wrap {
+            box-shadow: .5rem .5rem 2.5rem 1.5rem rgba(var(--bs-body-color-rgb), .15) !important;
+
+            a.btn {
+                background: #e45a50;
+                border: none;
+                border-radius: 0;
+                transition: all .3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .container-courses {
+        h2 {
+            margin-bottom: 20px !important;
+        }
+
+        .list-button-courses {
+            a {
+                font-weight: 700 !important;
+                transition: .3s;
+
+                &:hover {
+                    background: #6ccea0 !important;
+                    color: white !important;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: #1B1B1B;
+
+    .title-footer {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .list-courses {
+        gap: 40px;
+        li {
+            a {
+                font-size: 25px;
+            }
+        }
+    }
+}
