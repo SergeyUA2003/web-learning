@@ -28,3 +28,8 @@
   </footer>
 
 </template>
+<script>
+export default {
+  name: "NavFooter",
+}
+</script>

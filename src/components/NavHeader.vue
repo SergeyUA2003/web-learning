@@ -9,8 +9,8 @@
           <input class="col-6" type="text" name="Search" id="search" placeholder="Пошук курсів">
           <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
             <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link  " href="/ru/session/new">Вхід</a></li>
-              <li class="nav-item"><a class="nav-link me-3 " href="/ru/users/new">Реєстрація</a></li>
+              <li class="nav-item"><router-link class="nav-link" to="/login">Вхід</router-link></li>
+              <li class="nav-item"><router-link class="nav-link me-3 " to="/registration">Реєстрація</router-link></li>
               <li class="nav-item dropdown">
               </li>
             </ul>
