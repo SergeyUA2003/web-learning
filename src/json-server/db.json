@@ -1,0 +1,71 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "JavaScript",
+      "photoUrl": "/img/JS.jpg",
+      "duration": "18 годин"
+    },
+    {
+      "id": "2",
+      "name": "HTML",
+      "photoUrl": "/img/HTML.jpg",
+      "duration": "10 годин"
+    },
+    {
+      "id": "3",
+      "name": "CSS",
+      "photoUrl": "/img/CSS.jpg",
+      "duration": "9 годин"
+    },
+    {
+      "id": "4",
+      "name": "PHP",
+      "photoUrl": "/img/PHP.jpg",
+      "duration": "18 годин"
+    },
+    {
+      "id": "5",
+      "name": "TypeScript",
+      "photoUrl": "/img/TS.png",
+      "duration": "18 годин"
+    },
+    {
+      "id": "6",
+      "name": "Java",
+      "photoUrl": "/img/Java.png",
+      "duration": "20 годин"
+    }
+  ],
+  "users": [
+    {
+      "id": "dicomS_",
+      "name": "Serhii",
+      "email": "meizum2103@gmail.com",
+      "password": "123qwerty",
+      "roles": [
+        "ADMIN",
+        "USER"
+      ]
+    },
+    {
+      "id": "jS9UFrr",
+      "name": "Roman",
+      "email": "kovalchuk.roman03@gmail.com",
+      "password": "qwerty1234",
+      "roles": [
+        "ADMIN",
+        "USER"
+      ]
+    },
+    {
+      "email": "meizum2103@gmail.com",
+      "name": "Pips",
+      "password": "123Ivan123",
+      "roles": [
+        "USER"
+      ],
+      "id": "Nl27Qsq"
+    }
+  ]
+}
