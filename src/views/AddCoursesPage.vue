@@ -28,65 +28,29 @@
           </div>
         </div>
         <div>
-          <div class="row mt-5">
-            <div class="col-12"><h2 class="h4 text-center">Основи JavaScript</h2></div>
+          <div class="row mt-5 сol-input-info">
+<!--            <div class="col-12"><h2 class="h4 text-center">Основи JavaScript</h2></div>-->
+            <div class="col-12 d-flex justify-content-center">
+              <input id="sectionName" placeholder="Введіть назву розділа"/>
+            </div>
           </div>
           <div class="row">
-            <div class="col-12 mt-4">
+            <div class="col-3 mt-4">
               <ul class="list-group">
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/hello-world">1. Привіт,
-                  Світ!</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/comments">2.Використання
-                  коментарів у коді</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/basic">3.
-                  Арифметичні операції</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/operator">4.
-                  Оператори</a></li>
-
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/definition">5. Що таке
-                  змінна
-                </a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/errors">6. Помилки при
-                  роботі з змінною</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/variable-concatenation">7.
-                  Змінні та конкатенація</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/magic-numbers">8.
-                  Магічні числа</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/constants">9.
-                  Константи</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/interpolation">10.
-                  Інтерполяція</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/primitive-data-types">11.
-                  Типи даних</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/call">12. Функції та їх
-                  використання</a></li>
-
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/logical-operators">13.
-                  Логічні оператори</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/properties-syntax">14.
-                  Властивості</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/properties-methods">15.
-                  Методи</a></li>
-                <li class="list-group-item d-flex p-3"><a class="stretched-link text-decoration-none"
-                                                          href="/ru/languages/javascript/lessons/define-functions-syntax">16.
-                  Створення (визначення) функцій</a></li>
+                <li v-for="(paragraph, index) of chapterParagraphs" :key="index" class="list-group-item d-flex p-3">
+                  <a class="stretched-link text-decoration-none">{{index+1}}. {{paragraph.title}}</a>
+                </li>
+                <li class="list-group-item d-flex p-3">
+                  <input type="text" class="col" placeholder="Додайте новий параграф">
+                  <img src="/img/trash_icon.png" width="28" height="28" class="ms-2 img-thumbnail"/>
+                </li>
+                <li class="list-group-item d-flex justify-content-center">
+                  <img src="/img/plus_icon.png" class="img-thumbnail" width="28" height="28">
+                </li>
               </ul>
-
+            </div>
+            <div class="col сol-input-info mt-4">
+              <textarea type="text" placeholder="Введіть опис параграфа..."></textarea>
             </div>
           </div>
           <div class="mb-5 mt-5 pb-5">
@@ -111,7 +75,21 @@ export default {
   data() {
     return {
       courses: [],
-      addCourseImageUrl: '/img/add_image.jpg'
+      addCourseImageUrl: '/img/add_image.jpg',
+      chapterParagraphs: [
+        {
+          title: "Параграф 1",
+          text: "Текст до параграфа 1"
+        },
+        {
+          title: "Параграф 2",
+          text: "Текст до параграфа 2"
+        },
+        {
+          title: "Параграф 3",
+          text: "Текст до параграфа 3"
+        }
+      ]
     }
   },
   mounted() {
@@ -150,5 +128,8 @@ export default {
   cursor: pointer;
 }
 
+.list-group li {
+  cursor: pointer;
+}
 
 </style>
