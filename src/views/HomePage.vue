@@ -32,7 +32,7 @@
 <script>
 
 import axios from 'axios';
-import CourseList from '@/components/CourseList.vue';
+import CourseList from '@/components/course/CourseList.vue';
 
 export default {
   name: 'HomePage',

@@ -3,7 +3,7 @@
     <div class="pb-2 pt-2 border-bottom">
       <div class="navbar navbar-expand-md navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand me-md-4" href="/">
+          <a class="navbar-brand me-md-4" href="/public">
             <img width="60" alt="WP logo" src="/img/Logo.png"
                  loading="lazy"><span>Web Learning</span></a>
           <input class="col-6" type="text" name="Search" id="search" placeholder="Пошук курсів">

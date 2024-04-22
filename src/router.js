@@ -17,6 +17,10 @@ const routes = [
     {
         path: '/course/create',
         component: () => import('./views/AddCoursesPage'),
+    },
+    {
+        path: '/course/:id',
+        component: () => import('./views/ViewCoursePage'),
     }
 ]
 
