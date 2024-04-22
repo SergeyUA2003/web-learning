@@ -118,6 +118,33 @@ main {
             }
         }
     }
+
+    .related-course {
+        img {
+            max-height: 260px;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    &.add-courses-page {
+        .container {
+            .сol-input-info {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                input, textarea {
+                    padding: 10px;
+                    font-size: 16px;
+                }
+
+                textarea {
+                    min-height: 80px;
+                }
+            }
+        }
+    }
 }
 
 .new-course {
