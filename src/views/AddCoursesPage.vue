@@ -14,9 +14,11 @@
                   </span>
               </div>
             </div>
-            <div class="d-none d-md-block col-4 align-self-center text-center">
-              <img id="blah" src="#" alt=""/><br/>
-              <input type="file" name="AddImage" id="AddImage" accept="image/*"/>
+            <div class="d-md-block col-auto text-center">
+              <input type="file" name="AddCourseImage" id="AddImage" accept="image/*" @change="readURL" hidden/>
+              <label for="AddImage" id="courseImageLabel">
+                <img id="courseImage" width="225" height="225" :src="addCourseImageUrl" class="img-thumbnail" alt="word picture">
+              </label>
             </div>
           </div>
           <div class="row">
@@ -108,7 +110,8 @@ export default {
   name: 'AddCoursesPage',
   data() {
     return {
-      courses: []
+      courses: [],
+      addCourseImageUrl: '/img/add_image.jpg'
     }
   },
   mounted() {
@@ -116,7 +119,7 @@ export default {
         .get('http://localhost:3000/courses')
         .then(res => {
           // console.log('res: ', res);
-          this.courses = res.data
+          this.courses = Array.from(res.data).slice(0, 4)
         })
         .catch(error => {
           console.log('Error fetching courses from the server: ', error)
@@ -132,18 +135,20 @@ export default {
       if (file) {
         const reader = new FileReader();
         reader.onload = () => {
-          this.imageUrl = reader.result;
+          this.addCourseImageUrl = reader.result;
         };
         reader.readAsDataURL(file);
       }
     }
   }
 }
-
-let blocks = document.querySelectorAll(".related-course .col");
-
-let lastThreeBlocks = Array.from(blocks).slice(0, 3);
-lastThreeBlocks.forEach(function (block) {
-  block.style.display = "none"
-})
 </script>
+
+<style scoped>
+
+#courseImage {
+  cursor: pointer;
+}
+
+
+</style>
