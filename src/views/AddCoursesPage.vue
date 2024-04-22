@@ -15,8 +15,13 @@
               </div>
             </div>
             <div class="d-none d-md-block col-4 align-self-center text-center">
-              <img id="blah" src="#" alt="" /><br />
-              <input type="file" name="AddImage" id="AddImage" accept="image/*" />
+              <img id="blah" src="#" alt=""/><br/>
+              <input type="file" name="AddImage" id="AddImage" accept="image/*"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col сol-button">
+              <a href="#">Додати Курс</a>
             </div>
           </div>
         </div>
@@ -79,6 +84,7 @@
                                                           href="/ru/languages/javascript/lessons/define-functions-syntax">16.
                   Створення (визначення) функцій</a></li>
               </ul>
+
             </div>
           </div>
           <div class="mb-5 mt-5 pb-5">
