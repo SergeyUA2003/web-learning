@@ -14,6 +14,10 @@ const routes = [
         path: '/registration',
         component: () => import('./views/RegistrationPage'),
     },
+    {
+        path: '/course/create',
+        component: () => import('./views/AddCoursesPage'),
+    }
 ]
 
 const router = createRouter({
