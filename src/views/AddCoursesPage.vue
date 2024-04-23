@@ -47,7 +47,7 @@
               </ul>
             </div>
             <div class="col сol-input-info mt-4">
-              <textarea type="text" v-model="selectedParagraphContent.text" placeholder="Введіть опис параграфа..."></textarea>
+              <TextEditor v-bind:selectedParagraphContent="selectedParagraphContent"/>
             </div>
           </div>
           <div class="mb-5 mt-5 pb-5">
@@ -65,6 +65,8 @@
 <script>
 
 import axios from 'axios';
+import TextEditor from '@/components/parts/TextEditor.vue'
+
 import RelatedCourseList from '@/components/RelatedCourses.vue';
 import EditCourseParagraph from "@/components/course/EditCourseParagraph.vue";
 
@@ -102,7 +104,8 @@ export default {
   },
   components: {
     EditCourseParagraph,
-    RelatedCourseList
+    RelatedCourseList,
+    TextEditor
   },
 
   methods: {
