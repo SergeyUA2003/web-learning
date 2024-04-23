@@ -93,6 +93,12 @@
             </div>
             <RelatedCourseList v-bind:courses="courses"/>
           </div>
+          <div class="mb-5 mt-5 pb-5">
+            <div class="container-title">
+              <h2>Тестування</h2>
+            </div>
+            <TestList v-bind:courses="courses"/>
+          </div>
         </div>
       </div>
     </div>
@@ -103,6 +109,7 @@
 
 import axios from 'axios';
 import RelatedCourseList from '@/components/RelatedCourses.vue';
+import TestList from '@/components/PageTest.vue';
 
 export default {
   name: 'AddCoursesPage',
@@ -123,7 +130,8 @@ export default {
         })
   },
   components: {
-    RelatedCourseList
+    RelatedCourseList,
+    TestList,
   },
 
   methods: {
