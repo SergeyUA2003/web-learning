@@ -37,20 +37,17 @@
           <div class="row">
             <div class="col-3 mt-4">
               <ul class="list-group">
-                <li v-for="(paragraph, index) of chapterParagraphs" :key="index" class="list-group-item d-flex p-3">
-                  <a class="stretched-link text-decoration-none">{{index+1}}. {{paragraph.title}}</a>
+                <li v-for="(paragraph, index) of chapterParagraphs" :key="index" class="list-group-item d-flex align-items-center p-3">
+                  <a v-if="!paragraph.selected" class="stretched-link text-decoration-none" @click="selectParagraph(index)">{{index + 1}}. {{paragraph.title}}</a>
+                  <EditCourseParagraph v-else :paragraphs="chapterParagraphs" :index="index"/>
                 </li>
-                <li class="list-group-item d-flex p-3">
-                  <input type="text" class="col" placeholder="Додайте новий параграф">
-                  <img src="/img/trash_icon.png" width="28" height="28" class="ms-2 img-thumbnail"/>
-                </li>
-                <li class="list-group-item d-flex justify-content-center">
+                <li class="list-group-item d-flex justify-content-center" @click="addParagraph">
                   <img src="/img/plus_icon.png" class="img-thumbnail" width="28" height="28">
                 </li>
               </ul>
             </div>
             <div class="col сol-input-info mt-4">
-              <textarea type="text" placeholder="Введіть опис параграфа..."></textarea>
+              <textarea type="text" v-model="selectedParagraphContent.text" placeholder="Введіть опис параграфа..."></textarea>
             </div>
           </div>
           <div class="mb-5 mt-5 pb-5">
@@ -69,26 +66,26 @@
 
 import axios from 'axios';
 import RelatedCourseList from '@/components/RelatedCourses.vue';
+import EditCourseParagraph from "@/components/course/EditCourseParagraph.vue";
 
 export default {
   name: 'AddCoursesPage',
+  computed: {
+    selectedParagraphContent () {
+      let selectedIndex = this.chapterParagraphs.findIndex((paragraph) => paragraph.selected);
+      return this.chapterParagraphs[selectedIndex];
+    }
+  },
   data() {
     return {
       courses: [],
       addCourseImageUrl: '/img/add_image.jpg',
       chapterParagraphs: [
         {
-          title: "Параграф 1",
-          text: "Текст до параграфа 1"
+          title: '',
+          text: '',
+          selected: true,
         },
-        {
-          title: "Параграф 2",
-          text: "Текст до параграфа 2"
-        },
-        {
-          title: "Параграф 3",
-          text: "Текст до параграфа 3"
-        }
       ]
     }
   },
@@ -104,6 +101,7 @@ export default {
         })
   },
   components: {
+    EditCourseParagraph,
     RelatedCourseList
   },
 
@@ -117,6 +115,24 @@ export default {
         };
         reader.readAsDataURL(file);
       }
+    },
+    deselectChapterParagraphs() {
+      this.chapterParagraphs.forEach(paragraph => {
+        paragraph.selected = false
+      })
+    },
+    addParagraph: function () {
+      this.deselectChapterParagraphs();
+
+      this.chapterParagraphs.push({
+        title: '',
+        text: '',
+        selected: true,
+      });
+    },
+    selectParagraph: function (index) {
+      this.deselectChapterParagraphs()
+      this.chapterParagraphs[index].selected = true;
     }
   }
 }
