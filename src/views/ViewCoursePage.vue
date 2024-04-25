@@ -2,7 +2,7 @@
 import axios from 'axios';
 import ViewCourseBanner from '@/components/course/ViewCourseBanner.vue'
 import RelatedCourseList from "@/components/course/RelatedCourses.vue";
-import ViewSection from "@/views/ViewSection.vue";
+import ViewSection from "@/components/course/ViewCourseSection.vue";
 
 export default {
   name: "ViewCoursePage.vue",
