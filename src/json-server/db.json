@@ -4,7 +4,7 @@
       "id": "1",
       "name": "JavaScript",
       "description": "This JavaScript crash course is designed for beginners who want to learn the fundamentals of JavaScript programming language. JavaScript is a versatile and powerful scripting language used for web development, ranging from creating interactive websites to building complex web applications.\n\nIn this course, you will learn the basics of JavaScript syntax, including variables, data types, operators, control flow statements, functions, and objects. You will also explore advanced topics such as arrays, loops, conditionals, and error handling.\n\nBy the end of this course, you will have a solid understanding of JavaScript fundamentals and be equipped with the skills to start building your own dynamic and interactive web applications.",
-      "photoUrl": "/img/JS.jpg",
+      "courseImageUrl": "/img/JS.jpg",
       "duration": "18 годин",
       "chapters": [
         {
@@ -29,7 +29,7 @@
     {
       "id": "2",
       "name": "HTML",
-      "photoUrl": "/img/HTML.jpg",
+      "courseImageUrl": "/img/HTML.jpg",
       "duration": "10 годин",
       "chapters": [
         {
@@ -54,7 +54,7 @@
     {
       "id": "3",
       "name": "CSS",
-      "photoUrl": "/img/CSS.jpg",
+      "courseImageUrl": "/img/CSS.jpg",
       "duration": "9 годин",
       "chapters": [
         {
@@ -79,7 +79,7 @@
     {
       "id": "4",
       "name": "PHP",
-      "photoUrl": "/img/PHP.jpg",
+      "courseImageUrl": "/img/PHP.jpg",
       "duration": "18 годин",
       "chapters": [
         {
@@ -104,7 +104,7 @@
     {
       "id": "5",
       "name": "TypeScript",
-      "photoUrl": "/img/TS.png",
+      "courseImageUrl": "/img/TS.png",
       "duration": "18 годин",
       "chapters": [
         {
@@ -129,7 +129,7 @@
     {
       "id": "6",
       "name": "Java",
-      "photoUrl": "/img/Java.png",
+      "courseImageUrl": "/img/Java.png",
       "duration": "20 годин",
       "chapters": [
         {
@@ -155,7 +155,7 @@
       "name": "Vue crash course",
       "description": "In this fast-paced crash course, you'll dive into Vue.js, one of the most popular JavaScript frameworks for building modern web applications. Whether you're a beginner or an experienced developer, this course will cover the essentials of Vue.js, including Vue components, directives, data binding, event handling, and more. By the end of the session, you'll have a solid understanding of Vue.js and be ready to start building your own dynamic and interactive web applications. Join us for an exciting journey into the world of Vue.js!",
       "duration": "20 hours",
-      "photoUrl": "/img/Vue.png",
+      "courseImageUrl": "/img/Vue.png",
       "chapters": [
         {
           "title": "Introduction",

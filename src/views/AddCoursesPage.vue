@@ -2,39 +2,9 @@
   <main class="flex-grow-1 add-courses-page">
     <div class="mt-sm-4">
       <div class="container">
-        <EditCourseBanner :add-course-image-url="addCourseImageUrl" @change-course-image-url="(url) => this.addCourseImageUrl = url"/>
-        <div>
-          <div class="row mt-5 сol-input-info">
-<!--            <div class="col-12"><h2 class="h4 text-center">Основи JavaScript</h2></div>-->
-            <div class="col-12 d-flex justify-content-center">
-              <input id="chapterName" placeholder="Введіть назву розділа"/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3 mt-4">
-              <ul class="list-group">
-                <EditChapterParagraph v-for="(paragraph, index) of chapterParagraphs" :key="index"
-                                    :index="index"
-                                    :paragraph="paragraph"
-                                    :chapter-paragraphs="chapterParagraphs"
-                                    :select-paragraph="selectParagraph"
-                />
-                <li class="list-group-item d-flex justify-content-center" @click="addParagraph">
-                  <img src="/img/plus_icon.png" class="img-thumbnail" width="28" height="28">
-                </li>
-              </ul>
-            </div>
-            <div class="col сol-input-info mt-4">
-              <TextEditor v-bind:selectedParagraphContent="selectedParagraphContent"/>
-            </div>
-          </div>
-          <div class="mb-5 mt-5 pb-5">
-            <div class="container-title">
-              <h2>З Цими курсами переглядають</h2>
-            </div>
-            <RelatedCourseList v-bind:courses="courses"/>
-          </div>
-        </div>
+        <EditCourseBanner :course-image-url="courseImageUrl" @change-course-image-url="(url) => this.courseImageUrl = url"/>
+        <EditCourseChapter :add-paragraph="addParagraph" :chapter-paragraphs="chapterParagraphs"
+                      :select-paragraph="selectParagraph" :selected-paragraph-content="selectedParagraphContent"/>
       </div>
     </div>
   </main>
@@ -43,11 +13,9 @@
 <script>
 
 import axios from 'axios';
-import TextEditor from '@/components/parts/TextEditor.vue'
 
-import RelatedCourseList from '@/components/course/RelatedCourses.vue';
 import EditCourseBanner from "@/components/course/EditCourseBanner.vue";
-import EditChapterParagraph from "@/components/course/EditChapterParagraph.vue";
+import EditCourseChapter from "@/views/EditCourseChapter.vue";
 
 export default {
   name: 'AddCoursesPage',
@@ -59,8 +27,10 @@ export default {
   },
   data() {
     return {
-      courses: [],
-      addCourseImageUrl: '/img/add_image.jpg',
+      course: {
+
+      },
+      courseImageUrl: '/img/add_image.jpg',
       chapterParagraphs: [
         {
           title: '',
@@ -82,10 +52,8 @@ export default {
         })
   },
   components: {
-    EditChapterParagraph,
-    EditCourseBanner,
-    RelatedCourseList,
-    TextEditor
+    EditCourseChapter,
+    EditCourseBanner
   },
 
   methods: {

@@ -2,7 +2,7 @@
   <div class="col">
     <div class="card h-100 shadow-sm border-0">
       <img class="card-img-top" :alt="'Іконка' + course.name"
-           :src="course.photoUrl"
+           :src="course.courseImageUrl"
            loading="lazy">
       <div class="card-body">
         <div class="card-title h2">

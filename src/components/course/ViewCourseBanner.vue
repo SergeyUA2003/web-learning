@@ -29,7 +29,7 @@ export default {
       <div class="d-md-block col-auto text-center">
         <input type="file" name="AddCourseImage" id="AddImage" accept="image/*" hidden/>
         <label for="AddImage" id="courseImageLabel">
-          <img id="courseImage" width="225" height="225" :src="course.photoUrl" class="img-thumbnail"
+          <img id="courseImage" width="225" height="225" :src="course.courseImageUrl" class="img-thumbnail"
                alt="word picture">
         </label>
       </div>

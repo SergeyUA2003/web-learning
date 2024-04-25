@@ -5,22 +5,22 @@
         <input type="text" placeholder="Введіть назву курсу">
         <textarea type="text" placeholder="Введіть опис курсу"></textarea>
         <div class="text-muted lead mb-5">
-                <span class="text-nowrap me-4">
-                <span class="bi bi-clock me-2"><input type="text" placeholder="Кількість годин"></span>
-                  </span>
+          <span class="text-nowrap me-4">
+            <span class="bi bi-clock me-2"><input type="text" placeholder="Кількість годин"></span>
+          </span>
         </div>
       </div>
       <div class="d-md-block col-auto text-center">
         <input type="file" name="AddCourseImage" id="AddImage" accept="image/*" @change="readURL" hidden/>
         <label for="AddImage" id="courseImageLabel">
-          <img id="courseImage" width="225" height="225" :src="addCourseImageUrl" class="img-thumbnail"
+          <img id="courseImage" width="225" height="225" :src="courseImageUrl" class="img-thumbnail"
                alt="word picture">
         </label>
       </div>
     </div>
     <div class="row">
       <div class="col сol-button">
-        <a href="#">Додати Курс</a>
+        <a class="btn btn-primary" href="#">Додати Курс</a>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@
 export default {
   name: 'EditCourseBanner',
   props: {
-    addCourseImageUrl: {
+    courseImageUrl: {
       type: String,
       required: true
     },
