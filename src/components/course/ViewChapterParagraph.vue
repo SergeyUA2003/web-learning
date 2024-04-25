@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name: 'ViewSectionParagraph',
+  name: 'ViewChapterParagraph',
   props: {
     paragraph: {
       type: Object,

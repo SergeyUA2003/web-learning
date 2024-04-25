@@ -2,13 +2,13 @@
   <div>
     <div class="row mt-5 сol-input-info">
       <div class="col-12">
-        <h2 class="h4 text-center">{{this.$props.section.title}}</h2>
+        <h2 class="h4 text-center">{{ this.$props.chapter.title }}</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-3 mt-4">
         <ul class="list-group">
-          <ViewSectionParagraph v-for="(paragraph, index) of this.$props.section.chapterParagraphs" :key="index"
+          <ViewChapterParagraph v-for="(paragraph, index) of this.$props.chapter.paragraphs" :key="index"
                                 :index="index"
                                 :paragraph="paragraph"
                                 :select-paragraph="selectParagraph"
@@ -22,12 +22,12 @@
   </div>
 </template>
 <script>
-import ViewSectionParagraph from '@/components/course/ViewSectionParagraph.vue'
+import ViewChapterParagraph from '@/components/course/ViewChapterParagraph.vue'
 
 export default {
-  name: 'ViewSection',
+  name: 'ViewCourseChapter',
   components: {
-    ViewSectionParagraph,
+    ViewChapterParagraph: ViewChapterParagraph,
   },
   data() {
     return {
@@ -35,7 +35,7 @@ export default {
     }
   },
   props: {
-    section: {
+    chapter: {
       type: Object,
       required: true
     },
@@ -48,8 +48,8 @@ export default {
       this.selectedParagraphContent = this.getParagraphContent(index);
     },
     getParagraphContent (index) {
-      const section = this.$props.section;
-      return section.chapterParagraphs[index].text ?? '';
+      const chapter = this.$props.chapter;
+      return chapter.paragraphs[index].text ?? '';
     }
   }
 }

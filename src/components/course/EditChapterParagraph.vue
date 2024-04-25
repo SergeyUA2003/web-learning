@@ -9,7 +9,7 @@
 <script>
 import InputCourseParagraph from "@/components/course/InputCourseParagraph.vue";
 export default {
-  name: 'EditSectionParagraph',
+  name: 'EditChapterParagraph',
   props: {
     paragraph: {
       type: Object,

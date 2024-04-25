@@ -6,10 +6,10 @@
       "description": "This JavaScript crash course is designed for beginners who want to learn the fundamentals of JavaScript programming language. JavaScript is a versatile and powerful scripting language used for web development, ranging from creating interactive websites to building complex web applications.\n\nIn this course, you will learn the basics of JavaScript syntax, including variables, data types, operators, control flow statements, functions, and objects. You will also explore advanced topics such as arrays, loops, conditionals, and error handling.\n\nBy the end of this course, you will have a solid understanding of JavaScript fundamentals and be equipped with the skills to start building your own dynamic and interactive web applications.",
       "photoUrl": "/img/JS.jpg",
       "duration": "18 годин",
-      "sections": [
+      "chapters": [
         {
           "title": "Introduction",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Introduction to JavaScript",
               "text": "JavaScript is a versatile programming language commonly used for web development. Originally created for adding interactivity to web pages, JavaScript has evolved into a full-fledged programming language that can be used for both client-side and server-side development. JavaScript is lightweight, interpreted, and runs on any platform with a compatible runtime environment."
@@ -31,10 +31,10 @@
       "name": "HTML",
       "photoUrl": "/img/HTML.jpg",
       "duration": "10 годин",
-      "sections": [
+      "chapters": [
         {
           "title": "Introduction",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Introduction to HTML",
               "text": "HTML (Hypertext Markup Language) is the standard markup language for creating web pages and web applications. It provides a structured way to define the content and layout of a web page using a variety of elements and attributes. HTML documents are composed of a hierarchy of elements, each representing different types of content such as text, images, links, forms, and more."
@@ -56,10 +56,10 @@
       "name": "CSS",
       "photoUrl": "/img/CSS.jpg",
       "duration": "9 годин",
-      "sections": [
+      "chapters": [
         {
           "title": "Introduction",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Introduction to CSS",
               "text": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML. CSS allows web developers to style and layout web pages, controlling elements' appearance, positioning, size, color, and more. CSS separates the content of a web page from its presentation, making it easier to maintain and update the look and feel of a website."
@@ -81,10 +81,10 @@
       "name": "PHP",
       "photoUrl": "/img/PHP.jpg",
       "duration": "18 годин",
-      "sections": [
+      "chapters": [
         {
           "title": "Introduction",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Introduction to PHP",
               "text": "PHP (Hypertext Preprocessor) is a widely-used server-side scripting language designed for web development. Originally created by Rasmus Lerdorf in 1994, PHP is now maintained by the PHP community and the PHP development team. PHP is primarily used for generating dynamic web pages and interacting with databases, but it can also be used for command-line scripting and other server-side tasks."
@@ -106,10 +106,10 @@
       "name": "TypeScript",
       "photoUrl": "/img/TS.png",
       "duration": "18 годин",
-      "sections": [
+      "chapters": [
         {
           "title": "Introduction",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Introduction to TypeScript",
               "text": "TypeScript is a superset of JavaScript that adds static typing and other features to the language. Developed by Microsoft, TypeScript aims to make JavaScript development more scalable, maintainable, and error-resistant by providing optional static types, interfaces, classes, and other modern language features. TypeScript code is transpiled to plain JavaScript, which can run in any JavaScript runtime environment."
@@ -131,10 +131,10 @@
       "name": "Java",
       "photoUrl": "/img/Java.png",
       "duration": "20 годин",
-      "sections": [
+      "chapters": [
         {
           "title": "Introduction",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Introduction to Java",
               "text": "Java is a widely-used programming language known for its platform independence, robustness, and versatility. Developed by Sun Microsystems (now owned by Oracle Corporation), Java is designed to be simple, object-oriented, and secure. Java applications can run on any device with a Java Virtual Machine (JVM), making it suitable for a wide range of applications, including web development, mobile apps, enterprise software, and more."
@@ -156,10 +156,10 @@
       "description": "In this fast-paced crash course, you'll dive into Vue.js, one of the most popular JavaScript frameworks for building modern web applications. Whether you're a beginner or an experienced developer, this course will cover the essentials of Vue.js, including Vue components, directives, data binding, event handling, and more. By the end of the session, you'll have a solid understanding of Vue.js and be ready to start building your own dynamic and interactive web applications. Join us for an exciting journey into the world of Vue.js!",
       "duration": "20 hours",
       "photoUrl": "/img/Vue.png",
-      "sections": [
+      "chapters": [
         {
           "title": "Introduction",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Introduction to Vue.js",
               "text": "Vue.js is a progressive JavaScript framework for building user interfaces. It is designed from the ground up to be incrementally adoptable, meaning you can start using it for small parts of your application and gradually scale up to a full-fledged SPA (Single Page Application). Vue.js provides a simple and flexible API for building reactive and interactive web interfaces."
@@ -176,7 +176,7 @@
         },
         {
           "title": "Advanced Vue.js Concepts",
-          "chapterParagraphs": [
+          "paragraphs": [
             {
               "title": "Vue Directives",
               "text": "Vue.js provides a rich set of directives that allow you to manipulate the DOM in a declarative way. Directives are special tokens in the markup that tell the library to do something to a DOM element. Some common directives include v-if, v-for, v-bind, and v-on. These directives make it easy to handle conditional rendering, list rendering, attribute binding, and event handling in your Vue.js applications."

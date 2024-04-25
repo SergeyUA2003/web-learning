@@ -2,13 +2,12 @@
 import axios from 'axios';
 import ViewCourseBanner from '@/components/course/ViewCourseBanner.vue'
 import RelatedCourseList from "@/components/course/RelatedCourses.vue";
-import ViewSection from "@/components/course/ViewCourseSection.vue";
+import ViewCourseChapter from "@/components/course/ViewCourseChapter.vue";
 
 export default {
   name: "ViewCoursePage.vue",
   components: {
-    // eslint-disable-next-line vue/no-unused-components
-    ViewSection,
+    ViewCourseChapter,
     RelatedCourseList,
     ViewCourseBanner,
   },
@@ -48,7 +47,7 @@ export default {
     <div class="mt-sm-4">
       <div class="container">
         <ViewCourseBanner v-bind:course="course"/>
-        <ViewSection v-for="section of course.sections" :key="section.id" :section="section"/>
+        <ViewCourseChapter v-for="chapter of course.chapters" :key="chapter.id" :chapter="chapter"/>
         <div class="mb-5 mt-5 pb-5">
           <div class="container-title">
             <h2>З Цими курсами переглядають</h2>

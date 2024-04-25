@@ -7,13 +7,13 @@
           <div class="row mt-5 сol-input-info">
 <!--            <div class="col-12"><h2 class="h4 text-center">Основи JavaScript</h2></div>-->
             <div class="col-12 d-flex justify-content-center">
-              <input id="sectionName" placeholder="Введіть назву розділа"/>
+              <input id="chapterName" placeholder="Введіть назву розділа"/>
             </div>
           </div>
           <div class="row">
             <div class="col-3 mt-4">
               <ul class="list-group">
-                <EditSectionChapter v-for="(paragraph, index) of chapterParagraphs" :key="index"
+                <EditChapterParagraph v-for="(paragraph, index) of chapterParagraphs" :key="index"
                                     :index="index"
                                     :paragraph="paragraph"
                                     :chapter-paragraphs="chapterParagraphs"
@@ -47,7 +47,7 @@ import TextEditor from '@/components/parts/TextEditor.vue'
 
 import RelatedCourseList from '@/components/course/RelatedCourses.vue';
 import EditCourseBanner from "@/components/course/EditCourseBanner.vue";
-import EditSectionChapter from "@/components/course/EditSectionParagraph.vue";
+import EditChapterParagraph from "@/components/course/EditChapterParagraph.vue";
 
 export default {
   name: 'AddCoursesPage',
@@ -82,7 +82,7 @@ export default {
         })
   },
   components: {
-    EditSectionChapter,
+    EditChapterParagraph,
     EditCourseBanner,
     RelatedCourseList,
     TextEditor
