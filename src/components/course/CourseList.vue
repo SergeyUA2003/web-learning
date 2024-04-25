@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-import CourseItem from "@/components/CourseItem.vue";
+import CourseItem from "@/components/course/CourseItem.vue";
 
 export default {
   name: 'CourseList',

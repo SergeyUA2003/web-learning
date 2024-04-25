@@ -3,38 +3,196 @@
     {
       "id": "1",
       "name": "JavaScript",
+      "description": "This JavaScript crash course is designed for beginners who want to learn the fundamentals of JavaScript programming language. JavaScript is a versatile and powerful scripting language used for web development, ranging from creating interactive websites to building complex web applications.\n\nIn this course, you will learn the basics of JavaScript syntax, including variables, data types, operators, control flow statements, functions, and objects. You will also explore advanced topics such as arrays, loops, conditionals, and error handling.\n\nBy the end of this course, you will have a solid understanding of JavaScript fundamentals and be equipped with the skills to start building your own dynamic and interactive web applications.",
       "photoUrl": "/img/JS.jpg",
-      "duration": "18 годин"
+      "duration": "18 годин",
+      "sections": [
+        {
+          "title": "Introduction",
+          "chapterParagraphs": [
+            {
+              "title": "Introduction to JavaScript",
+              "text": "JavaScript is a versatile programming language commonly used for web development. Originally created for adding interactivity to web pages, JavaScript has evolved into a full-fledged programming language that can be used for both client-side and server-side development. JavaScript is lightweight, interpreted, and runs on any platform with a compatible runtime environment."
+            },
+            {
+              "title": "Getting Started with JavaScript",
+              "text": "To start writing JavaScript code, you can include it directly in your HTML file using `<script>` tags or link to external JavaScript files. Modern JavaScript development often involves using tools like npm, yarn, or package managers to manage dependencies and build processes. JavaScript code can be executed in the browser using developer tools or in server environments using Node.js."
+            },
+            {
+              "title": "JavaScript Basics",
+              "text": "JavaScript syntax is similar to other programming languages like C, Java, and Python. It includes features such as variables, data types, operators, control flow statements (if, else, while, for), functions, and objects. JavaScript is a dynamically typed language, meaning you don't need to specify data types explicitly, and variables can hold values of any type."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "2",
       "name": "HTML",
       "photoUrl": "/img/HTML.jpg",
-      "duration": "10 годин"
+      "duration": "10 годин",
+      "sections": [
+        {
+          "title": "Introduction",
+          "chapterParagraphs": [
+            {
+              "title": "Introduction to HTML",
+              "text": "HTML (Hypertext Markup Language) is the standard markup language for creating web pages and web applications. It provides a structured way to define the content and layout of a web page using a variety of elements and attributes. HTML documents are composed of a hierarchy of elements, each representing different types of content such as text, images, links, forms, and more."
+            },
+            {
+              "title": "Getting Started with HTML",
+              "text": "To start writing HTML code, you only need a simple text editor like Notepad or TextEdit. HTML documents are plain text files with a `.html` extension. You can create a basic HTML document by including an opening and closing `<html>` tag, `<head>` and `<body>` tags, and adding content inside these tags. Modern web development often involves using tools like code editors, preprocessors, and frameworks to streamline the development process."
+            },
+            {
+              "title": "HTML Basics",
+              "text": "HTML syntax consists of elements enclosed in angle brackets (`< >`) called tags. Tags are used to define the structure and semantics of a web page. HTML elements can have attributes that provide additional information or modify the behavior of the element. Common HTML elements include headings (`<h1>`, `<h2>`, `<h3>`), paragraphs (`<p>`), links (`<a>`), images (`<img>`), lists (`<ul>`, `<ol>`, `<li>`), forms (`<form>`, `<input>`, `<button>`), and more."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "3",
       "name": "CSS",
       "photoUrl": "/img/CSS.jpg",
-      "duration": "9 годин"
+      "duration": "9 годин",
+      "sections": [
+        {
+          "title": "Introduction",
+          "chapterParagraphs": [
+            {
+              "title": "Introduction to CSS",
+              "text": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML. CSS allows web developers to style and layout web pages, controlling elements' appearance, positioning, size, color, and more. CSS separates the content of a web page from its presentation, making it easier to maintain and update the look and feel of a website."
+            },
+            {
+              "title": "Getting Started with CSS",
+              "text": "To start styling web pages with CSS, you can include CSS code directly in an HTML document using the `<style>` tag, or you can link to an external CSS file using the `<link>` tag. CSS rules consist of a selector that targets HTML elements and a declaration block containing one or more property-value pairs that define the style of the selected elements. CSS can also be applied inline using the `style` attribute."
+            },
+            {
+              "title": "CSS Basics",
+              "text": "CSS syntax is straightforward and consists of selectors, properties, and values. Selectors target HTML elements based on their tag name, class, ID, or other attributes. Properties define the style of the selected elements, such as color, font-size, margin, padding, and border. Values specify the specific appearance or behavior of the selected elements, such as hex colors, pixel values, or keywords."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "4",
       "name": "PHP",
       "photoUrl": "/img/PHP.jpg",
-      "duration": "18 годин"
+      "duration": "18 годин",
+      "sections": [
+        {
+          "title": "Introduction",
+          "chapterParagraphs": [
+            {
+              "title": "Introduction to PHP",
+              "text": "PHP (Hypertext Preprocessor) is a widely-used server-side scripting language designed for web development. Originally created by Rasmus Lerdorf in 1994, PHP is now maintained by the PHP community and the PHP development team. PHP is primarily used for generating dynamic web pages and interacting with databases, but it can also be used for command-line scripting and other server-side tasks."
+            },
+            {
+              "title": "Getting Started with PHP",
+              "text": "To start writing PHP code, you need a web server with PHP installed. You can install PHP manually or use pre-configured packages like XAMPP, WAMP, or MAMP. PHP code is typically embedded directly into HTML files using special tags (`<?php ?>`). PHP files have a `.php` extension and can contain a mix of HTML, CSS, JavaScript, and PHP code. Modern PHP development often involves using frameworks like Laravel, Symfony, or CodeIgniter to streamline the development process."
+            },
+            {
+              "title": "PHP Basics",
+              "text": "PHP syntax is similar to other programming languages like C, Java, and JavaScript. PHP code is executed on the server, and the resulting output is sent to the client's web browser. PHP supports variables, data types, operators, control flow statements (if, else, while, for), functions, arrays, and more. PHP also provides built-in functions for interacting with databases, handling forms, processing files, and performing other common tasks."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "5",
       "name": "TypeScript",
       "photoUrl": "/img/TS.png",
-      "duration": "18 годин"
+      "duration": "18 годин",
+      "sections": [
+        {
+          "title": "Introduction",
+          "chapterParagraphs": [
+            {
+              "title": "Introduction to TypeScript",
+              "text": "TypeScript is a superset of JavaScript that adds static typing and other features to the language. Developed by Microsoft, TypeScript aims to make JavaScript development more scalable, maintainable, and error-resistant by providing optional static types, interfaces, classes, and other modern language features. TypeScript code is transpiled to plain JavaScript, which can run in any JavaScript runtime environment."
+            },
+            {
+              "title": "Getting Started with TypeScript",
+              "text": "To start writing TypeScript code, you need to install the TypeScript compiler (tsc) using npm or yarn. TypeScript code is typically written in `.ts` files, which are then compiled to `.js` files using the TypeScript compiler. You can use any text editor or integrated development environment (IDE) to write TypeScript code. TypeScript offers rich tooling support, including code completion, refactoring, and type checking."
+            },
+            {
+              "title": "TypeScript Basics",
+              "text": "TypeScript syntax is similar to JavaScript, with additional features like static types, interfaces, classes, enums, and modules. TypeScript allows you to annotate variables, parameters, and return types with type annotations to catch errors early and provide better tooling support. TypeScript also supports modern JavaScript features like arrow functions, destructuring, and async/await, making it a powerful and versatile language for web development."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "6",
       "name": "Java",
       "photoUrl": "/img/Java.png",
-      "duration": "20 годин"
+      "duration": "20 годин",
+      "sections": [
+        {
+          "title": "Introduction",
+          "chapterParagraphs": [
+            {
+              "title": "Introduction to Java",
+              "text": "Java is a widely-used programming language known for its platform independence, robustness, and versatility. Developed by Sun Microsystems (now owned by Oracle Corporation), Java is designed to be simple, object-oriented, and secure. Java applications can run on any device with a Java Virtual Machine (JVM), making it suitable for a wide range of applications, including web development, mobile apps, enterprise software, and more."
+            },
+            {
+              "title": "Getting Started with Java",
+              "text": "To start writing Java code, you need to install the Java Development Kit (JDK), which includes the Java compiler (javac) and the Java runtime environment (JRE). You can write Java code using a simple text editor or use integrated development environments (IDEs) like Eclipse, IntelliJ IDEA, or NetBeans, which provide advanced features like code completion, debugging, and project management."
+            },
+            {
+              "title": "Java Basics",
+              "text": "Java syntax is similar to other programming languages like C++ and C#. It includes features such as variables, data types, operators, control flow statements (if, else, while, for), methods, classes, and objects. Java is a strongly typed language, meaning you need to declare the type of each variable explicitly. It also supports object-oriented programming (OOP) principles like encapsulation, inheritance, and polymorphism."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vue crash course",
+      "description": "In this fast-paced crash course, you'll dive into Vue.js, one of the most popular JavaScript frameworks for building modern web applications. Whether you're a beginner or an experienced developer, this course will cover the essentials of Vue.js, including Vue components, directives, data binding, event handling, and more. By the end of the session, you'll have a solid understanding of Vue.js and be ready to start building your own dynamic and interactive web applications. Join us for an exciting journey into the world of Vue.js!",
+      "duration": "20 hours",
+      "photoUrl": "/img/Vue.png",
+      "sections": [
+        {
+          "title": "Introduction",
+          "chapterParagraphs": [
+            {
+              "title": "Introduction to Vue.js",
+              "text": "Vue.js is a progressive JavaScript framework for building user interfaces. It is designed from the ground up to be incrementally adoptable, meaning you can start using it for small parts of your application and gradually scale up to a full-fledged SPA (Single Page Application). Vue.js provides a simple and flexible API for building reactive and interactive web interfaces."
+            },
+            {
+              "title": "Setting Up Vue.js",
+              "text": "To get started with Vue.js, you can include the Vue.js library via CDN or install it using npm or yarn. Once installed, you can create a new Vue instance and mount it to a DOM element in your HTML file. Vue.js also offers Vue CLI, a command-line tool for scaffolding and managing Vue.js projects. With Vue CLI, you can quickly set up a new Vue project with features like webpack, Babel, and hot module replacement."
+            },
+            {
+              "title": "Vue Components",
+              "text": "Vue.js is centered around the concept of components, which are reusable and composable Vue instances. Components encapsulate both the UI and the behavior of a part of the application, making it easy to manage and reuse code. Vue components can have their own state, lifecycle hooks, methods, computed properties, and more. You can create components using Vue's component options API or the new Composition API introduced in Vue 3."
+            }
+          ]
+        },
+        {
+          "title": "Advanced Vue.js Concepts",
+          "chapterParagraphs": [
+            {
+              "title": "Vue Directives",
+              "text": "Vue.js provides a rich set of directives that allow you to manipulate the DOM in a declarative way. Directives are special tokens in the markup that tell the library to do something to a DOM element. Some common directives include v-if, v-for, v-bind, and v-on. These directives make it easy to handle conditional rendering, list rendering, attribute binding, and event handling in your Vue.js applications."
+            },
+            {
+              "title": "State Management with Vuex",
+              "text": "As your Vue.js application grows in complexity, managing state becomes increasingly important. Vuex is the official state management library for Vue.js applications. It provides a centralized store for all the state in your application and ensures that state changes are predictable and debuggable. With Vuex, you can define state, mutations, actions, and getters to manage your application's data in a structured and scalable way."
+            },
+            {
+              "title": "Vue Router for SPA",
+              "text": "Vue Router is the official router for Vue.js applications. It allows you to build Single Page Applications (SPAs) with Vue.js by providing routing capabilities. With Vue Router, you can define routes, navigate between different views, and handle navigation events. Vue Router integrates seamlessly with Vue.js components, making it easy to create dynamic and responsive SPAs."
+            }
+          ]
+        }
+      ],
+      "id": "pJsiuoy"
     }
   ],
   "users": [
