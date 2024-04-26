@@ -15,8 +15,7 @@
           />
         </ul>
       </div>
-      <div class="col сol-input-info mt-4">
-        {{selectedParagraphContent}}
+      <div class="col сol-input-info mt-4" v-html="selectedParagraphContent">
       </div>
     </div>
   </div>
@@ -54,3 +53,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+span {
+  line-height: 2.5 !important;
+}
+</style>
