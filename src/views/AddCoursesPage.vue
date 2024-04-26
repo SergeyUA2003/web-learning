@@ -3,8 +3,14 @@
     <div class="mt-sm-4">
       <div class="container">
         <EditCourseBanner :course-image-url="courseImageUrl" @change-course-image-url="(url) => this.courseImageUrl = url"/>
-        <EditCourseChapter :add-paragraph="addParagraph" :chapter-paragraphs="chapterParagraphs"
-                      :select-paragraph="selectParagraph" :selected-paragraph-content="selectedParagraphContent"/>
+        <EditCourseChapter v-for="(chapter, index) of this.course.chapters" :key="chapter.id"
+                           :chapter="chapter" :index="index"
+                           :can-be-deleted="this.course.chapters.length > 1" @remove-chapter="(i) => this.removeChapter(i)"
+
+        />
+        <div class="row d-flex justify-content-center mb-3">
+          <button class="col-auto btn btn-outline-primary" @click.prevent="addChapter">Додати розділ</button>
+        </div>
       </div>
     </div>
   </main>
@@ -12,6 +18,7 @@
 
 <script>
 
+// eslint-disable-next-line no-unused-vars
 import axios from 'axios';
 
 import EditCourseBanner from "@/components/course/EditCourseBanner.vue";
@@ -19,37 +26,19 @@ import EditCourseChapter from "@/views/EditCourseChapter.vue";
 
 export default {
   name: 'AddCoursesPage',
-  computed: {
-    selectedParagraphContent () {
-      let selectedIndex = this.chapterParagraphs.findIndex((paragraph) => paragraph.selected);
-      return this.chapterParagraphs[selectedIndex];
-    }
-  },
   data() {
     return {
       course: {
-
+        name: '',
+        description: '',
+        courseImageUrl: '',
+        duration: '',
+        chapters: [
+          this.createChapter(),
+        ]
       },
       courseImageUrl: '/img/add_image.jpg',
-      chapterParagraphs: [
-        {
-          title: '',
-          text: '',
-          selected: true,
-        },
-      ]
     }
-  },
-  mounted() {
-    axios
-        .get('http://localhost:3000/courses')
-        .then(res => {
-          // console.log('res: ', res);
-          this.courses = Array.from(res.data).slice(0, 4)
-        })
-        .catch(error => {
-          console.log('Error fetching courses from the server: ', error)
-        })
   },
   components: {
     EditCourseChapter,
@@ -57,23 +46,23 @@ export default {
   },
 
   methods: {
-    deselectChapterParagraphs() {
-      this.chapterParagraphs.forEach(paragraph => {
-        paragraph.selected = false
-      })
+    addChapter() {
+      this.course.chapters.push(this.createChapter());
     },
-    addParagraph: function () {
-      this.deselectChapterParagraphs();
-
-      this.chapterParagraphs.push({
+    removeChapter(index) {
+      this.course.chapters.splice(index, 1);
+    },
+    createChapter() {
+      return {
         title: '',
-        text: '',
-        selected: true,
-      });
-    },
-    selectParagraph: function (index) {
-      this.deselectChapterParagraphs()
-      this.chapterParagraphs[index].selected = true;
+        paragraphs: [
+          {
+            title: '',
+            text: '',
+            selected: true,
+          }
+        ]
+      };
     },
     addCourse() {
 
