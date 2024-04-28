@@ -132,6 +132,7 @@ main {
             .сol-input-info {
                 display: flex;
                 flex-direction: column;
+                line-height: 1.3;
 
                 input, textarea {
                     padding: 10px;
