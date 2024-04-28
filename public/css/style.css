@@ -132,7 +132,6 @@ main {
             .сol-input-info {
                 display: flex;
                 flex-direction: column;
-                gap: 15px;
 
                 input, textarea {
                     padding: 10px;
@@ -141,6 +140,43 @@ main {
 
                 textarea {
                     min-height: 80px;
+                }
+
+                p {
+                    line-height: 1.5;
+                    font-size: 16px;
+                    background: white;
+
+                    span {
+                        background: none !important;
+                    }
+                }
+
+                pre {
+                    margin: 15px 0;
+                    code {
+                        display: block;
+                        background-color: white;
+                        color: black;
+                        width: 100%;
+                        padding: 0 10px 12px 15px;
+
+                        &:before {
+                            content: "";
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            height: 27px;
+                            display: block;
+                            margin-bottom: 10px;
+                            background-color: #353d46;
+                            width: calc(100% + 25px);
+                            margin-left: -15px;
+                        }
+                    }
+                }
+
+                h2, h3, h4, h5 {
+                    line-height: 1.3;
                 }
             }
         }
