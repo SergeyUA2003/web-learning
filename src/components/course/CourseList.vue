@@ -5,7 +5,7 @@
         <div class="d-flex flex-wrap">
           <a class="mb-2 mb-sm-0 me-2 me-sm-0 fw-light text-decoration-none fs-5 badge text-bg-light p-2 p-sm-3"
              href="/ru/language_categories/programming">Рекомендовані Курси</a>
-          <router-link class="mb-2 mb-sm-0 me-2 me-sm-0 ms-sm-4 fw-light text-decoration-none fs-5 badge text-bg-light p-2 p-sm-3"
+          <router-link v-if="this.isAdmin()" class="mb-2 mb-sm-0 me-2 me-sm-0 ms-sm-4 fw-light text-decoration-none fs-5 badge text-bg-light p-2 p-sm-3"
              to="/course/create">Додати новий курс</router-link>
         </div>
       </div>
@@ -20,13 +20,18 @@
   </div>
 </template>
 <script>
+
 import CourseItem from "@/components/course/CourseItem.vue";
+import {isAdmin} from "@/authorization.js";
 
 export default {
   name: 'CourseList',
   props: ['courses'],
   components: {
     CourseItem
+  },
+  methods : {
+    isAdmin
   }
 }
 </script>

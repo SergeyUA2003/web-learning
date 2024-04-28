@@ -9,7 +9,7 @@
           </router-link>
           <input class="col-6" type="text" name="Search" id="search" placeholder="Пошук курсів">
           <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
-            <ul v-if="isLoggedIn" class="navbar-nav">
+            <ul v-if="this.isLoggedIn()" class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" @click="logout" href="#">Вихід</a>
               </li>
@@ -27,19 +27,18 @@
   </header>
 </template>
 <script>
+import {isLoggedIn} from "@/authorization.js";
 
 export default {
   name: 'NavHeader',
-  computed: {
-    isLoggedIn: function() {
-      return this.$store.getters.isAuthenticated;
-    }
-  },
+
   methods: {
     logout: function() {
       this.$store.commit('removeHeader', { name: 'Authorization' });
       this.$router.push('/login');
-    }
+    },
+    isLoggedIn
   }
 }
+
 </script>

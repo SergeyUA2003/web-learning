@@ -6,10 +6,10 @@
            loading="lazy">
       <div class="card-body">
         <div class="card-title h2">
-          <a class="stretched-link text-dark text-decoration-none text-nowrap"
-                       :href="'/course/' + course.id">
+          <router-link class="stretched-link text-dark text-decoration-none text-nowrap"
+                       :to="'/course/' + course.id">
             {{course.name}}
-          </a>
+          </router-link>
         </div>
         <div class="text-muted"><span class="text-nowrap d-inline-block me-4">{{course.duration}}</span>
         </div>

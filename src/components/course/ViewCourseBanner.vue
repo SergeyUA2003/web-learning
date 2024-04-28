@@ -1,4 +1,6 @@
 <script>
+
+import {isAdmin} from "@/authorization.js";
 export default {
   name: "ViewCourseBanner",
   props: {
@@ -6,6 +8,10 @@ export default {
       type: Object,
       required: true
     }
+  },
+
+  methods : {
+    isAdmin
   }
 }
 </script>
@@ -25,7 +31,7 @@ export default {
            href="#">
           Розпочати навчання
         </a>
-        <a class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4"
+        <a class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4" v-if="this.isAdmin()"
            :href="`/course/${course.id}/edit`">
           Редагувати Курс
         </a>

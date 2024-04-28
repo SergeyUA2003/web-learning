@@ -16,7 +16,7 @@ server.post('/auth/login', (req, res) => {
     return res.status(401).json({ message: 'Invalid username or password' });
   }
 
-  const token = jwt.sign({ sub: user.email, name: user.name }, 'ZelL3R3CY/qLbotX2eiBtbV6fjxtkh93iwJSsbnZS64=');
+  const token = jwt.sign({ sub: user.email, name: user.name, roles: user.roles }, 'ZelL3R3CY/qLbotX2eiBtbV6fjxtkh93iwJSsbnZS64=');
   res.json({ token });
 });
 

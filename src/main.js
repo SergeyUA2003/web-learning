@@ -20,6 +20,10 @@ const store = createStore({
         isAuthenticated (state) {
             const token = state.headers['Authorization'];
             return token !== null && token !== undefined;
+        },
+
+        getAuthorization (state) {
+            return state.headers['Authorization'];
         }
     }
 })
