@@ -21,7 +21,12 @@ const routes = [
     {
         path: '/course/:id',
         component: () => import('./views/ViewCoursePage'),
-    }
+    },
+
+    {
+        path: '/course/{id}/edit',
+        component: () => import('./views/ViewCoursePage'),
+    },
 ]
 
 const router = createRouter({
