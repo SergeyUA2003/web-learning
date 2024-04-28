@@ -25,6 +25,10 @@ export default {
            href="#">
           Розпочати навчання
         </a>
+        <a class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4"
+           :href="`/course/${course.id}/edit`">
+          Редагувати Курс
+        </a>
       </div>
       <div class="d-md-block col-auto text-center">
         <input type="file" name="AddCourseImage" id="AddImage" accept="image/*" hidden/>

@@ -1,6 +1,6 @@
 <template>
   <NavHeader />
-  <router-view />
+  <router-view :key="$route.fullPath"/>
   <NavFooter />
 </template>
 

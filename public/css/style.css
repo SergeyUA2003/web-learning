@@ -132,7 +132,7 @@ main {
             .сol-input-info {
                 display: flex;
                 flex-direction: column;
-                gap: 15px;
+                line-height: 1.3;
 
                 input, textarea {
                     padding: 10px;
@@ -141,6 +141,43 @@ main {
 
                 textarea {
                     min-height: 80px;
+                }
+
+                p {
+                    line-height: 1.5;
+                    font-size: 16px;
+                    background: white;
+
+                    span {
+                        background: none !important;
+                    }
+                }
+
+                pre {
+                    margin: 15px 0;
+                    code {
+                        display: block;
+                        background-color: white;
+                        color: black;
+                        width: 100%;
+                        padding: 0 10px 12px 15px;
+
+                        &:before {
+                            content: "";
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            height: 27px;
+                            display: block;
+                            margin-bottom: 10px;
+                            background-color: #353d46;
+                            width: calc(100% + 25px);
+                            margin-left: -15px;
+                        }
+                    }
+                }
+
+                h2, h3, h4, h5 {
+                    line-height: 1.3;
                 }
             }
         }
@@ -189,6 +226,55 @@ main {
             }
         }
     }
+}
+
+.new-course {
+    #courses-body-content {
+        #title_wrap {
+            input {
+                padding: 3px 8px;
+                font-size: 1.2em;
+                line-height: 100%;
+                height: 1.9em;
+                width: 100%;
+                outline: 0;
+                margin: 0 0 15px;
+                background-color: #fff;
+            }
+        }
+
+        .container-img {
+            display: flex;
+            margin: 25px auto;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            h3 {
+                width: 100%;
+                font-size: 1.6em;
+            }
+        }
+
+        button {
+            background: green;
+            border: none;
+            border-radius: 0;
+            transition: all .3s;
+            padding: 20px 40px;
+            color: white;
+
+            &:hover {
+                opacity: 0.9;
+                border: none;
+            }
+        }
+    }
+}
+
+.title-edit-course {
+    font-size: clamp(24px, 36 / 1440 * 100vw,36px);
+
 }
 
 footer {

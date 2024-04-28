@@ -2,12 +2,20 @@
   <div class="px-3 px-sm-5 py-4 py-sm-5 mb-4 bg-white rounded-3 shadow-sm border" itemscope="">
     <div class="row">
       <div class="col сol-input-info">
-        <input type="text" placeholder="Введіть назву курсу" v-on:change="(event) => this.$emit('setCourseName', event.target.value)">
-        <textarea type="text" placeholder="Введіть опис курсу" v-on:change="(event) => this.$emit('setCourseDescription', event.target.value)"></textarea>
+        <input type="text" placeholder="Введіть назву курсу"
+               v-on:change="(event) => this.$emit('setCourseName', event.target.value)"
+               :value="this.courseName">
+        <textarea type="text" placeholder="Введіть опис курсу"
+                  v-on:change="(event) => this.$emit('setCourseDescription', event.target.value)"
+                  :value="this.courseDescription">
+        </textarea>
         <div class="text-muted lead mb-5">
           <span class="text-nowrap me-4">
             <span class="bi bi-clock me-2">
-              <input type="text" placeholder="Кількість годин" v-on:change="(event) => this.$emit('setCourseDuration', event.target.value)"/>
+              <input type="text" placeholder="Кількість годин"
+                     v-on:change="(event) => this.$emit('setCourseDuration', event.target.value)"
+                     :value="this.courseDuration">
+
             </span>
           </span>
         </div>
@@ -21,7 +29,7 @@
     </div>
     <div class="row">
       <div class="col сol-button">
-        <button class="btn btn-primary" @click.prevent="this.$props.addCourse">Додати Курс</button>
+        <button class="btn btn-primary" @click.prevent="this.$props.saveCourse">{{ saveCourseText }}</button>
       </div>
     </div>
   </div>
@@ -37,10 +45,26 @@ export default {
       type: String,
       required: true
     },
-    addCourse: {
+    saveCourse: {
       type: Function,
       required: true
-    }
+    },
+    saveCourseText: {
+      type: String,
+      required: true
+    },
+    courseName: {
+      type: String,
+      required: false
+    },
+    courseDescription: {
+      type: String,
+      required: false
+    },
+    courseDuration: {
+      type: String,
+      required: false
+    },
   },
   methods: {
     readURL(event) {
