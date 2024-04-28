@@ -8,6 +8,7 @@
                           @set-course-name="(name) => course.name = name"
                           @set-course-description="(description) => course.description = description"
                           @set-course-duration="(duration) => course.duration = duration"
+                          :save-course-text="'Додати Курс'"
         />
         <EditCourseChapter v-for="(chapter, index) of this.course.chapters" :key="chapter.id"
                            :chapter="chapter" :index="index"

@@ -272,6 +272,11 @@ main {
     }
 }
 
+.title-edit-course {
+    font-size: clamp(24px, 36 / 1440 * 100vw,36px);
+
+}
+
 footer {
     background: #1B1B1B;
 
