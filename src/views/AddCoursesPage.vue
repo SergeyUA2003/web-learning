@@ -3,13 +3,12 @@
     <div class="mt-sm-4">
       <div class="container">
         <EditCourseBanner :course-image-url="course.courseImageUrl"
-                          :add-course="this.addCourse"
+                          :save-course="this.addCourse"
                           @change-course-image-url="(url) => course.courseImageUrl = url"
                           @set-course-name="(name) => course.name = name"
                           @set-course-description="(description) => course.description = description"
                           @set-course-duration="(duration) => course.duration = duration"
-                          :save-course-text="'Додати Курс'"
-        />
+                          :save-course-text="'Додати Курс'"/>
         <EditCourseChapter v-for="(chapter, index) of this.course.chapters" :key="chapter.id"
                            :chapter="chapter" :index="index"
                            :can-be-deleted="this.course.chapters.length > 1" @remove-chapter="(i) => this.removeChapter(i)"

@@ -2,7 +2,7 @@
   <div>
     <div class="row mt-5 сol-input-info">
       <div class="col-12">
-        <h2 class="h4 text-center">{{ this.$props.chapter.title }}</h2>
+        <h2 class="h4 text-center" id="use-to-courses">{{ this.$props.chapter.title }}</h2>
       </div>
     </div>
     <div class="row">

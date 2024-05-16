@@ -277,6 +277,28 @@ main {
 
 }
 
+.unregistered a {
+    pointer-events: none;
+}
+
+.header-search {
+    position: absolute;
+    left: 70%;
+    color: transparent;
+}
+
+.fw-bold {
+    margin-top: 25px;
+}
+
+.text-muted {
+    margin-top: 1rem;
+    margin-bottom: 1rem !important;
+}
+
+.start-training {
+
+}
 footer {
     background: #1B1B1B;
 

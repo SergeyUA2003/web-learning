@@ -17,17 +17,17 @@
                   <label class="form-label email required" for="sign_in_form_email">Email<abbr
                       title="required"></abbr></label>
                   <input v-model="email"
-                      class="form-control shadow-sm string email required" data-testid="email"
-                      autocomplete="email" type="email" name="sign_in_form[email]"
-                      id="sign_in_form_email"/>
+                         class="form-control shadow-sm string email required" data-testid="email"
+                         autocomplete="email" type="email" name="sign_in_form[email]"
+                         id="sign_in_form_email"/>
                 </div>
                 <div class="mb-3 password required sign_in_form_password"><label
                     class="form-label password required" for="sign_in_form_password">Пароль<abbr
                     title="required"></abbr></label>
                   <input v-model="password"
-                    class="form-control shadow-sm password required" data-testid="password"
-                    autocomplete="current-password" type="password" name="sign_in_form[password]"
-                    id="sign_in_form_password"/>
+                         class="form-control shadow-sm password required" data-testid="password"
+                         autocomplete="current-password" type="password" name="sign_in_form[password]"
+                         id="sign_in_form_password"/>
                 </div>
                 <div class="form-group">
                   <input
@@ -44,6 +44,7 @@
 </template>
 <script>
 import axios from 'axios';
+import {fetchAuthorizationUser} from "@/authorization.js";
 
 export default {
   name: 'LoginPage',
@@ -61,14 +62,15 @@ export default {
           password: this.password
         }).then(res => {
           const token = res.data.token;
-          // console.log("auth token:", token);
-          this.$store.commit('addHeader', { name: 'Authorization', value: 'Bearer ' + token });
+          this.$store.commit('addHeader', {name: 'Authorization', value: 'Bearer ' + token});
+          this.fetchAuthorizationUser();
           this.$router.push('/');
         }).catch(error => {
           console.log('Error fetching login: ', error);
         })
       }
-    }
+    },
+    fetchAuthorizationUser
   }
 }
 </script>

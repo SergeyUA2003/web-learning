@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 
 import {isAdmin} from "@/authorization.js";
 export default {
@@ -11,9 +12,33 @@ export default {
   },
 
   methods : {
-    isAdmin
+    isAdmin,
+    enrollCourse: function () {
+      let authorization = this.$store.getters.getAuthorization;
+      let user = this.$store.getters.getAuthorizationUser;
+      let filtered = user.enrolledCourses.filter(item => item.courseId === this.course.id);
+      console.log(filtered);
+
+      if (filtered.length === 0) {
+        
+        user.enrolledCourses.push({
+          "courseId": this.course.id,
+          "progress": 0
+        })
+
+        axios.patch("http://localhost:3000/users/" + user.id, {
+          headers: {
+            "Authorization": authorization
+          },
+          enrolledCourses: user.enrolledCourses
+        }).then(response => {
+          console.log("Update User", response.data);
+        })
+      }
+    }
   }
 }
+
 </script>
 
 <template>
@@ -27,14 +52,13 @@ export default {
         <div class="text-muted lead mb-5">
           <span class="text-nowrap me-4">{{course.duration}}</span>
         </div>
-        <a class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4"
-           href="#">
-          Розпочати навчання
+        <a class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4 start-training"
+           href="#" @click="this.enrollCourse()"> Розпочати навчання
         </a>
-        <a class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4" v-if="this.isAdmin()"
-           :href="`/course/${course.id}/edit`">
+        <router-link class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4" v-if="this.isAdmin()"
+           :to ="`/course/${course.id}/edit`">
           Редагувати Курс
-        </a>
+        </router-link>
       </div>
       <div class="d-md-block col-auto text-center">
         <input type="file" name="AddCourseImage" id="AddImage" accept="image/*" hidden/>
@@ -46,7 +70,3 @@ export default {
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>

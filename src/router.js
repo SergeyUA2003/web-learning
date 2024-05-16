@@ -26,6 +26,14 @@ const routes = [
         path: '/course/:id/edit',
         component: () => import('./views/EditCoursePage'),
     },
+    {
+        path: '/course/search',
+        component: () => import('./components/course/SearchPage'),
+    },
+    {
+        path: '/user',
+        component: () => import('./views/UserPage.vue'),
+    },
 ]
 
 const router = createRouter({

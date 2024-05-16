@@ -8,8 +8,12 @@
             <span>Web Learning</span>
           </router-link>
           <input class="col-6" type="text" name="Search" id="search" placeholder="Пошук курсів">
+          <router-link to="your_page_url_here" class="header-search">Пошук</router-link>
           <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
             <ul v-if="this.isLoggedIn()" class="navbar-nav">
+              <li class="user-name">
+                <router-link to="/user">{{this.getAuthorizationUser().name}}</router-link>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" @click="logout" href="#">Вихід</a>
               </li>
@@ -27,7 +31,7 @@
   </header>
 </template>
 <script>
-import {isLoggedIn} from "@/authorization.js";
+import {isLoggedIn, getAuthorizationUser} from "@/authorization.js";
 
 export default {
   name: 'NavHeader',
@@ -37,7 +41,8 @@ export default {
       this.$store.commit('removeHeader', { name: 'Authorization' });
       this.$router.push('/login');
     },
-    isLoggedIn
+    isLoggedIn,
+    getAuthorizationUser
   }
 }
 

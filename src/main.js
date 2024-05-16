@@ -1,12 +1,13 @@
-import { createApp } from 'vue'
-import { createStore } from 'vuex'
+import {createApp} from 'vue'
+import {createStore} from 'vuex'
 import WebLearnApplication from './Application.vue'
-import router from  './router';
+import router from './router';
 
 
 const store = createStore({
     state: {
-        headers: {}
+        headers: {},
+        authorizationUser: {},
     },
     mutations: {
         addHeader (state, {name, value}) {
@@ -14,6 +15,10 @@ const store = createStore({
         },
         removeHeader (state, {name}) {
             state.headers[name] = null;
+        },
+
+        setAuthorizationUser (state, value) {
+            state.authorizationUser = value;
         }
     },
     getters: {
@@ -24,8 +29,13 @@ const store = createStore({
 
         getAuthorization (state) {
             return state.headers['Authorization'];
+        },
+
+        getAuthorizationUser (state) {
+           return state.authorizationUser;
         }
     }
+
 })
 
 createApp(WebLearnApplication)
