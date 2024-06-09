@@ -11,20 +11,46 @@ export default {
     }
   },
 
-  methods : {
+  methods: {
     isAdmin,
     enrollCourse: function () {
       let authorization = this.$store.getters.getAuthorization;
       let user = this.$store.getters.getAuthorizationUser;
+      // var button = document.getElementById("start-training");
+      var divs = document.querySelectorAll("div[data-v-76b14389]");
+      var testbutton = document.querySelectorAll(".test-button")
+      var modal = document.getElementById("myModal");
+      console.log(modal);
+      var closeButton = document.getElementsByClassName("close")[0];
+      console.log(closeButton);
+      var buttonCheck = document.getElementsByClassName("button-check")[0];
+      console.log(buttonCheck);
+
+      divs.forEach(function(div) {
+        div.style.opacity = "1";
+      });
+
+      testbutton.forEach(function(div) {
+        div.style.opacity = "1";
+      });
+
+      if (!user) {
+        console.error("User is not defined");
+        return;
+      }
+
+      if (!user.enrolledCourses) {
+        console.error("enrolledCourses is not defined for the user");
+        user.enrolledCourses = []; // Initialize it as an empty array if it's not defined
+      }
+
       let filtered = user.enrolledCourses.filter(item => item.courseId === this.course.id);
-      console.log(filtered);
 
       if (filtered.length === 0) {
-        
         user.enrolledCourses.push({
           "courseId": this.course.id,
           "progress": 0
-        })
+        });
 
         axios.patch("http://localhost:3000/users/" + user.id, {
           headers: {
@@ -33,7 +59,9 @@ export default {
           enrolledCourses: user.enrolledCourses
         }).then(response => {
           console.log("Update User", response.data);
-        })
+        }).catch(error => {
+          console.error("Error updating user", error);
+        });
       }
     }
   }
@@ -59,11 +87,15 @@ export default {
            :to ="`/course/${course.id}/edit`">
           Редагувати Курс
         </router-link>
+        <router-link class="btn btn-lg btn-primary px-4 mb-3 mt-2 me-4 test-button"
+                     :to ="`/test`">
+          Тестування
+        </router-link>
       </div>
       <div class="d-md-block col-auto text-center">
         <input type="file" name="AddCourseImage" id="AddImage" accept="image/*" hidden/>
         <label for="AddImage" id="courseImageLabel">
-          <img id="courseImage" width="225" height="225" :src="course.courseImageUrl" class="img-thumbnail"
+          <img id="courseImage" width="224" height="225" :src="course.courseImageUrl" class="img-thumbnail"
                alt="word picture">
         </label>
       </div>

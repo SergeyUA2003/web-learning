@@ -34,6 +34,10 @@ const routes = [
         path: '/user',
         component: () => import('./views/UserPage.vue'),
     },
+    {
+        path: '/test',
+        component: () => import('./views/TestPage.vue'),
+    },
 ]
 
 const router = createRouter({

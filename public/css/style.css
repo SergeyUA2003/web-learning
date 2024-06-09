@@ -4,7 +4,12 @@ body {
     header {
         .navbar-collapse {
             width: 100%;
-            max-width: 170px;
+            max-width: 300px;
+
+            .navbar-nav {
+                gap: 10px;
+                align-items: center;
+            }
         }
 
         .container-fluid {
@@ -155,6 +160,7 @@ main {
 
                 pre {
                     margin: 15px 0;
+
                     code {
                         display: block;
                         background-color: white;
@@ -273,13 +279,17 @@ main {
 }
 
 .title-edit-course {
-    font-size: clamp(24px, 36 / 1440 * 100vw,36px);
+    font-size: clamp(24px, 36 / 1440 * 100vw, 36px);
 
 }
 
 .unregistered a {
     pointer-events: none;
 }
+
+/*div[data-v-76b14389], .test-button {*/
+/*    opacity: 0;*/
+/*}*/
 
 .header-search {
     position: absolute;
@@ -299,6 +309,49 @@ main {
 .start-training {
 
 }
+
+.container-user {
+    li {
+        font-size: 24px;
+        margin: 2rem 0;
+    }
+
+    .courses-list {
+        margin-bottom: 4rem;
+    }
+}
+
+.question {
+    padding: 16px;
+}
+#lesson-tab {
+    max-height: 800px;
+}
+#response-form {
+    label {
+        margin: 10px 0;
+    }
+
+    input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    h5 {
+        margin-bottom: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+
 footer {
     background: #1B1B1B;
 

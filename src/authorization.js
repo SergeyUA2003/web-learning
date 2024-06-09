@@ -19,18 +19,23 @@ function isAdmin() {
     if (isLoggedIn.bind(this) ()) {
         let token = this.$store.getters.getAuthorization;
         console.log(typeof token)
-        let user = extractJwtClaims(token);
+        let claims = token.split(".")[1];
+        let user = JSON.parse(base64UrlDecode(claims));
 
         return user.roles.includes("ADMIN");
     }
 
     else {
-        return false
+        let containerCourses = document.querySelector('.container-courses');
+        if (containerCourses) {
+            containerCourses.classList.add('unregistered');
+        }
+        return false;
     }
 }
 
 function isLoggedIn() {
-    console.log(this.$store.getters.getAuthorization)
+    console.log(this.$store.getters.getAuthorization);
     return this.$store.getters.isAuthenticated;
 }
 

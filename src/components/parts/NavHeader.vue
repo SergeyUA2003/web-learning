@@ -12,7 +12,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
             <ul v-if="this.isLoggedIn()" class="navbar-nav">
               <li class="user-name">
-                <router-link to="/user">{{this.getAuthorizationUser().name}}</router-link>
+                <span>Вітаємо, </span><router-link to="/user">{{this.getAuthorizationUser().name}}</router-link>
               </li>
               <li class="nav-item">
                 <a class="nav-link" @click="logout" href="#">Вихід</a>
